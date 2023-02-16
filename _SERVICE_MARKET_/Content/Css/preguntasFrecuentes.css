@@ -1,0 +1,50 @@
+﻿body {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 300;
+}
+
+#logo {
+    width: 65px;
+    height: 65px;
+}
+
+#service {
+    color: #1b6bc2;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.titulo {
+    margin-top: 20px;
+    color: #1b6bc2;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.preguntas {
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+.acordion h2 button {
+    color: black;
+    font-size: 22px;
+}
+
+.accordion-body h2 {
+    color: #1b6bc2;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.accordion-body p {
+    color: black;
+    font-size: 18px;
+}
+
+.volver {
+    font-size: 18px;
+}
+
+

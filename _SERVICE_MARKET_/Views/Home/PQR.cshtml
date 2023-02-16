@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "PQR";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Service Market</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Css/PQR.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <section class="pqr bg-dark">
+            <h1 id="titulo">Preguntas, quejas y reclamos.</h1>
+            <form class="formulario">
+                <div class="container">
+                    <input type="text" class="form-control" placeholder="Ingresa tu nombre completo" required>
+
+                    <select class="form-select" required>
+                        <option selected disabled value="">Tipo de documento</option>
+                        <option>Cédula de ciudadanía</option>
+                        <option>Cédula de extranjería</option>
+                        <option>Pasaporte</option>
+                    </select>
+
+                    <input type="text" class="form-control" placeholder="Ingresa tu número de documento" required>
+
+                    <input type="text" class="form-control" placeholder="¿A qué correo electrónico podemos comunicarnos?" required>
+
+                    <input type="text" class="form-control" placeholder="Ingresa tu número de celular" required>
+
+                    <select class="form-select" required>
+                        <option selected disabled value="">¿Qué tipo de solicitud vas a radicar?</option>
+                        <option>Petición</option>
+                        <option>Queja</option>
+                        <option>sugerencia</option>
+                        <option>Felicitación</option>
+                    </select>
+
+                    <textarea class="text-area form-control" placeholder="Escriba su solicitud"></textarea>
+
+                    <div class="botones d-grid gap-2 col-6 mx-auto">
+                        <button class="btn btn-primary" type="submit">Enviar</button>
+                        <a href="@Url.Action("Index", "Home")" class="volver btn btn-outline-light">Volver al inicio</a>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+
+</html>

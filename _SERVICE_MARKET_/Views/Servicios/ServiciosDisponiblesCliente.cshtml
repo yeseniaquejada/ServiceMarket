@@ -1,0 +1,142 @@
+﻿@model IEnumerable<_SERVICE_MARKET_.Models.Servicio>
+
+@{
+    ViewBag.Title = "Servicios Disponibles";
+    Layout = "~/Views/Shared/Layout_C.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Service Market</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Css/ServiciosDisponibles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section>
+        <h1 class="titulo1">Servicios Disponibles</h1>
+        <div class="container">
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                    <div class="col-lg-4">
+                        <div class="card-servicios card text-light bg-dark drop" style="width: 22rem;">
+                            <div class="card-body info">
+                                <h5 class="card-title">@Html.DisplayFor(modelItem => item.NOMBRE_SER)</h5>
+                                <p class="card-text">@Html.DisplayFor(modelItem => item.DESCRIPCION_BREVE)</p>
+                                <h4 class="card-title">$ @Html.DisplayFor(modelItem => item.PRECIO_SER)</h4>
+                                <h6 class="card-title">@Html.DisplayFor(modelItem => item.NOMBRE_CAT)</h6>
+                            </div>
+                            <div class="botonInfo">
+                                <button type="submit" class="btn btn-primary text-decoration-none">@Html.ActionLink("Más información", "informacionPublicaciones", new { ID = item.ID_SERVICIO }, new { @class = "text-decoration-none text-light" })</button>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h1 class="titulo">Categorías</h1>
+        <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="cards-wrapper carousel-categorias">
+
+                        <div class="card-categorias card text-light bg-dark drop">
+                            <div class="cards-wrapper">
+                                <img src="~/Imagenes/albañileria.jpeg" class="card-img-top" alt="albañileria">
+                            </div>
+                            <div class="informacion-card card-body text-center">
+                                <h5 class="card-title">Albañilería</h5>
+                                <p class="card-text">Enfocada en construir y reparar estructuras, paredes, muros, partes de edificios, casas y más.</p> <br>
+                                <button class="btn btn-primary">
+                                    <a href="#">Más información</a>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="card-categorias card text-light bg-dark drop">
+                            <img src="~/Imagenes/mantenimiento.jpg" class="card-img-top" alt="belleza">
+                            <div class="informacion-card card-body text-center">
+                                <h5 class="card-title">Mantenimiento</h5>
+                                <p class="card-text">Solucionar y prevenir las posibles averías que pueda haber en equipos, máquinas e instalaciones.</p> <br>
+                                <button class="btn btn-primary">
+                                    <a href="#">Más información</a>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="card-categorias card text-light bg-dark drop">
+                            <img src="~/Imagenes/remodelación.jpg" class="card-img-top" alt="remodelación">
+                            <div class="informacion-card card-body text-center">
+                                <h5 class="card-title">Remodelación</h5>
+                                <p class="card-text">Renovación de los diversos espacios en los cuales se requiera del servicio.</p> <br>
+                                <button class="btn btn-primary">
+                                    <a href="#">Más información</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="cards-wrapper carousel-categorias">
+                        <div class="card-categorias card text-light bg-dark drop">
+                            <img src="~/Imagenes/belleza.jpg" class="card-img-top" alt="mantenimiento">
+                            <div class="informacion-card card-body text-center">
+                                <h5 class="card-title">Belleza</h5>
+                                <p class="card-text">Servicios enfocados en cortes, peinados, maquillajes, manicure, pedicura, masajes, etc.</p> <br>
+                                <button class="btn btn-primary">
+                                    <a href="#">Más información</a>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="card-categorias card text-light bg-dark drop">
+                            <img src="~/Imagenes/salud.jpg" class="card-img-top" alt="belleza">
+                            <div class="informacion-card card-body text-center">
+                                <h5 class="card-title">Salud</h5>
+                                <p class="card-text">Prestación de servicios desde los diferentes campos de la salud.</p> <br>
+                                <button class="btn btn-primary">
+                                    <a href="#">Más información</a>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="card-categorias card text-light bg-dark drop">
+                            <img src="~/Imagenes/trabajo-domestico.jpg" class="card-img-top" alt="trabajo-domestico">
+                            <div class="informacion-card card-body text-center">
+                                <h5 class="card-title">Trabajos domésticos</h5>
+                                <p class="card-text">Toda la ayuda doméstica que necesitas en casa con expertas en orden, limpieza y desinfección.</p> <br>
+                                <button class="btn btn-primary">
+                                    <a href="#">Más información</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Service Market</title>
+    <link rel="shortcut icon" href="~/Logos/logo.png" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Css/Layout.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <img id="logo" src="~/Logos/logo.png" />
+                <a id="service" class="navbar-brand" href="@Url.Action("Index", "Home")">
+                    Service Market
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menú de navegación</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <form class="d-flex" role="search" action="@Url.Action("Buscar","Home")" method="post">
+                            <input class="busquedad form-control me-2" type="search" placeholder="Buscar Servicios" aria-label="Search" name="NOMBRE_SER">
+                            <button class="btn btn-primary" type="submit">Buscar</button>
+                        </form>
+                        <br />
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="item nav-link" href="@Url.Action("Registrar", "Acceso")">Crea tu cuenta</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="item nav-link" href="@Url.Action("Login", "Acceso")">Ingresa</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="item nav-link" href="@Url.Action("Index", "Home")">Servicios Disponibles</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="item nav-link" href="@Url.Action("Categorias", "Home")">Categorías</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div>
+                @RenderBody()
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark">
+        <div class="text-center">
+            <div class="row m-4 p-4">
+                <div class="col">
+                    <h4 class="link-light">Servicio al cliente</h4>
+                    <br />
+                    <a href="@Url.Action("PQR", "Home")" class="text-decoration-none link-light">Ayuda/PQR</a>
+                    <br><br>
+                    <a href="@Url.Action("preguntasFrecuentes", "Home")" class="text-decoration-none link-light">Preguntas frecuentes</a>
+                </div>
+                <div class="col">
+                    <h4 class="link-light">Acerca de service market</h4>
+                    <br />
+                    <a href="#" class="text-decoration-none link-light">Terminos y condiciones</a>
+                    <br><br><br><br>
+                    <h5 class="link-light">Desarrolladoras</h5>
+                    <h6 class="link-light">Yesenia Quejada Rojas<br> Valentina Zapata Flórez</h6>
+                </div>
+                <div class="col">
+                    <h4 class="link-light">Síguenos</h4>
+                    <br />
+                    <a href="#" class="text-decoration-none link-light"><img src="~/Imagenes/facebook.png" alt="" width="40"> Facebook</a>
+                    <br><br>
+                    <a href="#" class="text-decoration-none link-light"><img src="~/Imagenes/instagram.png" alt="" width="40"> Instagram</a>
+                    <br><br>
+                    <a href="#" class="text-decoration-none link-light"><img src="~/Imagenes/gorjeo.png" alt="" width="40"> Twitter</a>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <p class="link-light text-center">&copy; @DateTime.Now.Year - Service Market</p>
+        <br><br>
+    </footer>
+
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

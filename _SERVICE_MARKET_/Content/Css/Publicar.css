@@ -1,0 +1,42 @@
+﻿body {
+    margin-top: 150px;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 300;
+}
+
+#titulo {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.publicacion {
+    background-color: rgba(30, 33, 38, 0.9);
+    margin: 20px;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+label {
+    color: white;
+    font-size: 20px;
+}
+
+.form-control {
+    min-height: 2rem;
+}
+
+textarea {
+    resize: none;
+}
+
+.buttons {
+    justify-content: center;
+}
+
+.btn, .a {
+    color: white !important;
+    font-size: 18px;
+    height: 40px;
+}

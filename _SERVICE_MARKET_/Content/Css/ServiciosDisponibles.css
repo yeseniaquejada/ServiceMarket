@@ -1,0 +1,97 @@
+﻿body {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 300;
+}
+
+.titulo {
+    margin-top: 30px;
+    color: #1b6bc2;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.titulo1 {
+    margin-top: 110px;
+    color: #1b6bc2;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-servicios {
+    margin-top: 15px;
+    height: 310px;
+}
+
+.botonInfo {
+    margin-bottom: 7px;
+}
+
+.botonInfo .btn{
+    color:white;
+    text-decoration: none;
+
+}
+
+.info {
+    overflow-y: scroll;
+}
+
+    .info::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    .info::-webkit-scrollbar-track {
+        background: #3C4149;
+        border-radius: 50px
+    }
+
+    .info::-webkit-scrollbar-thumb {
+        background: #50565F;
+        border-radius: 50px;
+    }
+
+.card-servicios h5 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+}
+
+.card-servicios h6 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+}
+
+.card-servicios button {
+    margin-top: 15px;
+    transform: translateX(70%);
+}
+
+.carousel-categorias {
+    display: flex;
+}
+
+.card-categorias {
+    margin: 0.4cm;
+    width: calc(90%/3);
+    height: 30%;
+}
+
+.carousel-categorias img {
+    height: 250px;
+}
+
+.informacion-card h5 {
+    font-weight: bold;
+}
+
+.informacion-card button a {
+    color: white;
+    text-decoration: none;
+}
+
+.drop {
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.9));
+}

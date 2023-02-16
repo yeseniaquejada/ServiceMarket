@@ -1,0 +1,182 @@
+﻿body {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 300;
+}
+
+.img-carousel {
+    height: 65vh;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.mensaje-carousel h5 {
+    font-size: 45px;
+    font-weight: bold;
+    background-color: rgba(242, 243, 244, 0.5);
+    border-radius: 30px;
+}
+
+.carousel-categorias {
+    display: flex;
+}
+
+.card-categorias {
+    margin: 0.4cm;
+    width: calc(90%/3);
+    height: 30%;
+}
+
+.informacion-card h5 {
+    font-weight: bold;
+}
+
+.informacion-card button a {
+    color: white;
+    text-decoration: none;
+}
+
+.drop {
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.9));
+}
+
+.titulo {
+    margin-top: 20px;
+    color: #1b6bc2;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-servicios {
+    margin-top: 15px;
+    height: 310px;
+}
+
+.botonInfo {
+    margin-bottom: 5px;
+}
+
+.info {
+    overflow-y: scroll;
+}
+
+    .info::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    .info::-webkit-scrollbar-track {
+        background: #3C4149;
+        border-radius: 50px
+    }
+
+    .info::-webkit-scrollbar-thumb {
+        background: #50565F;
+        border-radius: 50px;
+    }
+
+.card-servicios h5 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+}
+
+.card-servicios h6 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+}
+
+.card-servicios button {
+    margin-top: 15px;
+    transform: translateX(70%);
+}
+
+.testimonios {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.informacion-tes {
+    width: 90%;
+    height: 80px;
+    display: block;
+    text-align: center;
+    padding: 40% 5%;
+    background-color: #1E2126;
+    color: white;
+    border-radius: 30px;
+}
+
+    .informacion-tes h2 {
+        font-size: 25px;
+        letter-spacing: 2px;
+        font-weight: bold;
+    }
+
+    .informacion-tes p {
+        font-size: 18px;
+    }
+
+.single-box {
+    position: relative;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.9));
+}
+
+.img-area {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 4px solid #1b6bc2;
+    overflow: hidden;
+    top: 10px;
+    left: 110px;
+    border-radius: 50%;
+}
+
+    .img-area img {
+        width: 100%;
+    }
+
+.indicadores {
+    left: 0;
+    top: auto;
+    bottom: -70px;
+}
+
+    .indicadores li {
+        background: #000;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+    }
+
+    .indicadores .active {
+        background-color: white;
+    }
+
+.swal-overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.swal-modal {
+    background-color: #1e2126;
+}
+
+.swal-title {
+    color: #1b6bc2;
+    font-size: 35px;
+}
+
+.swal-text {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+.swal-button {
+    border-radius: 2px;
+    background-color: #1b6bc2;
+    font-size: 18px;
+    border: none;
+}

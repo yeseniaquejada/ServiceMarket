@@ -1,0 +1,49 @@
+﻿body {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 300;
+    color: white;
+}
+
+.bg-dark {
+    background-color: #16191c !important;
+}
+
+.bg-dark-x {
+    background-color: #1e2126 !important;
+}
+
+.form-control,
+.btn,
+.form-select {
+    color: white !important;
+    min-height: 3.125rem;
+    line-height: initial;
+}
+
+#logo {
+    width: 170px;
+    height: 90px;
+}
+
+#logoR {
+    width: 90px;
+    height: 80px;
+}
+
+.info {
+    margin-left: 20px;
+}
+
+.carouselR {
+    height: 1150px;
+}
+
+h1, label, p {
+    color: white;
+}
+
+.registrarse {
+    padding: 10px;
+    font-size: 40px;
+    color: #1b6bc2;
+}

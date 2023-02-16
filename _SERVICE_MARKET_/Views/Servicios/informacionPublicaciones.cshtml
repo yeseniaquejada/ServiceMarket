@@ -1,0 +1,85 @@
+﻿@model _SERVICE_MARKET_.Models.Servicio
+
+@{
+    ViewBag.Title = "Informacion publicaciones";
+    Layout = "~/Views/Shared/Layout_CP.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Service Market</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Css/informacionPublicaciones.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section>
+        <h1 class="titulo">@Html.DisplayFor(model => model.NOMBRE_SER)</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="~/Imagenes/limpiezac1.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="~/Imagenes/mantenimientoc2.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="~/Imagenes/remodelacionc3.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="~/Imagenes/salud y bellezac4.jpg" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="informacion col-sm-6">
+                    <h4><b>Precio:</b> $@Html.DisplayFor(model => model.PRECIO_SER)</h4>
+                    <h4><b>Descripción:</b> @Html.DisplayFor(model => model.DESCRIPCION_BREVE)</h4>
+                    <h4><b>Términos:</b> @Html.DisplayFor(model => model.TERMINOS_SER)</h4>
+                    <h4><b>Categoría:</b> @Html.DisplayFor(model => model.NOMBRE_CAT)</h4>
+                    <h4><b>Ciudad:</b> @Html.DisplayFor(model => model.NOMBRE_CIUDAD)</h4>
+                </div>
+
+                <div class="informacion col-sm-1">
+                    <img src="~/Imagenes/usuario.png" width="100" height="100" class="imgUsuario">
+                </div>
+                <div class="informacion col-sm-5">
+                    <h4><b>Prestador de servicio:</b> @Html.DisplayFor(model => model.NOMBRE_USU) @Html.DisplayFor(model => model.APELLIDOS_USU)</h4>
+                    <h4><b>Contacto:</b> +@Html.DisplayFor(model => model.CELULAR_USU)</h4>
+                </div>
+                <div class="col-sm-3 btn-group">
+                    <a href="https://api.whatsapp.com/send?phone=@Html.DisplayFor(model => model.CELULAR_USU)" class="btn btn-primary" style="font-size:20px; height: 40px; text-decoration: none; margin-top: 25px;">
+                        Adquirir servicio
+                    </a>
+                </div>
+                <div class="col-sm-3 btn-group">
+                    @Html.ActionLink("Volver al inicio", "ServiciosDisponibles", new { }, new { @class = "btn btn-outline-primary", style = "font-size:20px; height: 40px; text-decoration: none; margin-top: 25px;" })
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

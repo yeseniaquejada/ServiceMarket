@@ -1,0 +1,201 @@
+﻿
+@{ Layout = null; }
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <link rel="shortcut icon" href="~/Logos/logo.png" />
+    <link href="~/Content/Css/Acceso.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        .img-1 {
+            background-image: url('../../Imagenes/construccion1.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 1150px;
+        }
+
+        .img-2 {
+            background-image: url('../../Imagenes/peluqueria3.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 1150px;
+        }
+
+        .img-3 {
+            background-image: url('../../Imagenes/reparacion2.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 1150px;
+        }
+    </style>
+</head>
+
+<body class="bg-dark">
+    <section class="row g-0">
+        <div class="carouselR col-lg-5 d-none d-lg-block">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item img-1 min-vh-100 active">
+                        <div class="carousel-caption d-none d-md-block bg-dark rounded-pill">
+                            <h5>Servicios de remodelación y albañilería</h5>
+                            <p>Orientada en la construcción, renovación y reparación de estructuras, paredes, muros, partes de edificios, casas y más.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item img-2 min-vh-100">
+                        <div class="carousel-caption d-none d-md-block bg-dark rounded-pill">
+                            <h5>Servicios de salud y belleza</h5>
+                            <p>Orientada a la prestación de servicios desde los diferentes campos de la salud y la belleza como lo son cortes, peinados, maquillajes, manicure, pedicura, masajes, etc.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item img-3 min-vh-100">
+                        <div class="carousel-caption d-none d-md-block bg-dark rounded-pill">
+                            <h5>Servicios de mantenimiento</h5>
+                            <p>Orientada a solucionar y prevenir las posibles averías que pueda haber en equipos, máquinas e instalaciones para conservar y garantizar su óptimo funcionamiento.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </div>
+
+
+        <div class="col-lg-7 d-flex flex-column aling-items-end min-vh-100">
+            <div class="px-lg-5 py-lg-4 p-4 w-100 aling-self-center">
+                <div class="d-flex">
+                    <img id="logoR" src="~/Logos/logo.png" class="img-fluid" />
+                    <h1 class="registrarse font-weight-bold mb-2">Registrarse</h1>
+                </div>
+                <br />
+                <form class="mb-5" action="@Url.Action("Registrar","Acceso")" method="post" autocomplete="off">
+                    <div class="mb-2 d-flex">
+                        <div class="col-5">
+                            <label class="form-label font-weight-bold">Tipo de documento</label>
+                            <select class="form-select bg-dark-x border-0 mb-2" aria-label="Default select example" name="TIPO_DOC_USU" required>
+                                <option selected disabled value="">-----</option>
+                                <option value="Cedula de ciudadania">Cédula de ciudadanía</option>
+                                <option value="Cedula de extranjeria">Cédula de extranjería</option>
+                                <option value="Pasaporte">Pasaporte</option>
+                            </select>
+                        </div>
+                        <div class="info col-7">
+                            <label class="form-label font-weight-bold">Número de identificación</label>
+                            <input type="text" name="N_IDENTIFICACION_USU" class="form-control bg-dark-x border-0 mb-2" placeholder="Ingresa tu número de identificación" required>
+                        </div>
+                    </div>
+                    <div class="mb-2 d-flex">
+                        <div class="col-6">
+                            <label class="form-label font-weight-bold">Fecha de nacimiento</label>
+                            <input type="date" name="FECHA_NACIMIENTO_USU" class="form-control bg-dark-x border-0 mb-2" required>
+                        </div>
+                        <div class="info col-6">
+                            <label class="form-label font-weight-bold">Fecha de expedición</label>
+                            <input type="date" name="FECHA_EXPEDICION_USU" class="form-control bg-dark-x border-0 mb-2" required>
+                        </div>
+                    </div>
+                    <div class="mb-2 d-flex">
+                        <div class="col-6">
+                            <label class="form-label font-weight-bold">Nombres</label>
+                            <input type="text" name="NOMBRE_USU" class="form-control bg-dark-x border-0 mb-2" placeholder="Ingresa tu nombre" required>
+                        </div>
+                        <div class="info col-6">
+                            <label class="form-label font-weight-bold">Apellidos</label>
+                            <input type="text" name="APELLIDOS_USU" class="form-control bg-dark-x border-0 mb-2" placeholder="Ingresa tus apellidos" required>
+                        </div>
+                    </div>
+                    <div class="mb-2 d-flex">
+                        <div class="col-6">
+                            <label class="form-label font-weight-bold">Celular</label>
+                            <input value="57" type="text" name="CELULAR_USU" class="form-control bg-dark-x border-0 mb-2" placeholder="Ingresa tu celular" required>
+                        </div>
+                        <div class="info col-6">
+                            <label class="form-label font-weight-bold">Género</label>
+                            <select class="form-select bg-dark-x border-0 mb-2" aria-label="Default select example" name="GENERO_USU" required>
+                                <option selected disabled value="">-----</option>
+                                <option value="Femenino">Femenino</option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-2 d-flex">
+                        <div class="col-4">
+                            <label class="form-label font-weight-bold">Ciudad</label>
+                            <select class="form-select bg-dark-x border-0 mb-2" aria-label="Default select example" name="ID_CIUDAD_FK" required>
+                                <option selected disabled value="">-----</option>
+                                <option value="1">Medellin</option>
+                                <option value="2">Caldas</option>
+                                <option value="3">Barbosa</option>
+                                <option value="4">Sabaneta</option>
+                                <option value="5">La estrella</option>
+                                <option value="6">Itagui</option>
+                                <option value="7">Envigado</option>
+                                <option value="8">Bello</option>
+                                <option value="9">Girardota</option>
+                                <option value="10">Copacabana</option>
+                            </select>
+                        </div>
+                        <div class="info col-8">
+                            <label class="form-label font-weight-bold">Dirección</label>
+                            <input type="text" name="DIRECCION_USU" class="form-control bg-dark-x border-0 mb-2" placeholder="Ingresa tu dirección" required>
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label font-weight-bold">Email</label>
+                        <input name="CORREO_ELECTRONICO_USU" type="email" class="form-control bg-dark-x border-0" placeholder="Ingresa tu email" aria-describedby="emailHelp" required>
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label font-weight-bold">Contraseña</label>
+                        <input name="CONTRASENA_USU" type="password" class="form-control bg-dark-x border-0 mb-2" placeholder="Ingresa tu contraseña" required>
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label font-weight-bold">Confirmar contraseña</label>
+                        <input name="CONFIRMAR_CONTRASENA" type="password" class="form-control bg-dark-x border-0 mb-2" placeholder="Ingresa tu confirmación de contraseña" required>
+                    </div>
+                    <br />
+
+                    @if (ViewData["MENSAJE"] != null)
+                    {
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            @ViewData["MENSAJE"]
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    }
+
+                    <button type="submit" class="btn btn-primary w-100">Registrarse</button>
+
+                </form>
+                <div class="text-center w-100">
+                    <p class="d-inline-block mb-0">¿Ya tienes una cuenta?</p>
+                    <a href="@Url.Action("Login","Acceso")" class="font-weight-bold text-decoration-none">Iniciar sesión</a>
+                    <br /><br />
+                    <a href="@Url.Action("Index","Home")" class="font-weight-bold text-decoration-none">Volver al inicio</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
+
