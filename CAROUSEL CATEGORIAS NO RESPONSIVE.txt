@@ -1,0 +1,113 @@
+ <section>
+            <h1 class="titulo">Categorías</h1>
+            <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="cards-wrapper carousel-categorias">
+
+                            <div class="card-categorias card text-light bg-dark drop">
+                                <div class="cards-wrapper">
+                                    <img src="~/Imagenes/albañileria.jpeg" class="card-img-top" alt="albañileria">
+                                </div>
+                                <div class="informacion-card card-body text-center">
+                                    <h5 class="card-title">Albañilería</h5>
+                                    <p class="card-text">Enfocada en construir y reparar estructuras, paredes, muros, partes de edificios, casas y más.</p> <br>
+                                    <button class="btn btn-primary">
+                                        <a href="#">Más información</a>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="card-categorias card text-light bg-dark drop">
+                                <img src="~/Imagenes/mantenimiento.jpg" class="card-img-top" alt="belleza">
+                                <div class="informacion-card card-body text-center">
+                                    <h5 class="card-title">Mantenimiento</h5>
+                                    <p class="card-text">Solucionar y prevenir las posibles averías que pueda haber en equipos, máquinas e instalaciones.</p> <br>
+                                    <button class="btn btn-primary">
+                                        <a href="#">Más información</a>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="card-categorias card text-light bg-dark drop">
+                                <img src="~/Imagenes/remodelación.jpg" class="card-img-top" alt="remodelación">
+                                <div class="informacion-card card-body text-center">
+                                    <h5 class="card-title">Remodelación</h5>
+                                    <p class="card-text">Renovación de los diversos espacios en los cuales se requiera del servicio.</p> <br>
+                                    <button class="btn btn-primary">
+                                        <a href="#">Más información</a>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="cards-wrapper carousel-categorias">
+                            <div class="card-categorias card text-light bg-dark drop">
+                                <img src="~/Imagenes/belleza.jpg" class="card-img-top" alt="mantenimiento">
+                                <div class="informacion-card card-body text-center">
+                                    <h5 class="card-title">Belleza</h5>
+                                    <p class="card-text">Servicios enfocados en cortes, peinados, maquillajes, manicure, pedicura, masajes, etc.</p> <br>
+                                    <button class="btn btn-primary">
+                                        <a href="#">Más información</a>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="card-categorias card text-light bg-dark drop">
+                                <img src="~/Imagenes/salud.jpg" class="card-img-top" alt="belleza">
+                                <div class="informacion-card card-body text-center">
+                                    <h5 class="card-title">Salud</h5>
+                                    <p class="card-text">Prestación de servicios desde los diferentes campos de la salud.</p> <br>
+                                    <button class="btn btn-primary">
+                                        <a href="#">Más información</a>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="card-categorias card text-light bg-dark drop">
+                                <img src="~/Imagenes/trabajo-domestico.jpg" class="card-img-top" alt="trabajo-domestico">
+                                <div class="informacion-card card-body text-center">
+                                    <h5 class="card-title">Trabajos domésticos</h5>
+                                    <p class="card-text">Toda la ayuda doméstica que necesitas en casa con expertas en orden, limpieza y desinfección.</p> <br>
+                                    <button class="btn btn-primary">
+                                        <a href="#">Más información</a>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+
+
+
+.carousel-categorias {
+    display: flex;
+}
+
+.card-categorias {
+    margin: 0.4cm;
+    width: calc(90%/3);
+    height: 30%;
+}
+
+.informacion-card h5 {
+    font-weight: bold;
+}
+
+.informacion-card button a {
+    color: white;
+    text-decoration: none;
+}
