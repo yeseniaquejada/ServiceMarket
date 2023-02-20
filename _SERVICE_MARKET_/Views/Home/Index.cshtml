@@ -65,14 +65,15 @@
             </div>
         </section>
 
-            <section class="cards-content">
             <h1 class="titulo">Servicios Disponibles</h1>
+
+            <section class="cards-content">
             <div class="container">
                 <div class="row">
                     @foreach (var item in Model)
                     {
                         <div class="col-lg-4">
-                            <div class="card-servicios card text-light bg-dark drop" style="width: 21rem;">
+                            <div class="card-servicios card text-light bg-dark drop" style="width: 21rem; height:21rem;">
                                 <div class="card-body info">
                                     <h5 class="card-title">@Html.DisplayFor(modelItem => item.NOMBRE_SER)</h5>
                                     <p class="card-text">@Html.DisplayFor(modelItem => item.DESCRIPCION_BREVE)</p>

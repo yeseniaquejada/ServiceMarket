@@ -28,8 +28,7 @@
 }
 
 .card-servicios {
-    margin-top: 15px;
-    height: 310px;
+    margin-top: 10px;
 }
 
 .botonInfo {
@@ -97,10 +96,4 @@
     border: none;
 }
 
-@media screen and (max-width: 1220px){
-    .cards-content{
-        max-width:1000px;
-        padding: 0 10px;
-    }
 
-}
