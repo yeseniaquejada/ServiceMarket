@@ -20,92 +20,98 @@
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section class="carousel-content" id="carouselIndex">
-        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="10000">
-                    <img src="~/Imagenes/limpiezaCarousel.jpg" class="img-carousel d-block w-100" alt="...">
-                    <div class="mensaje-carousel carousel-caption d-md-block">
-                        <h5>Servicios de trabajos domésticos</h5>
-                    </div>
+    <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active c-item">
+                <img src="~/Imagenes/limpiezaCarousel.jpg" class="d-block w-100 c-img" alt="...">
+                <div class="carousel-caption top-0 mt-5">
+                    <p class="mt-5 fs-3">Servicios de</p>
+                    <h1 class="display-1 fw-bolder text-capitalize">Trabajos domésticos</h1>
+                    <button type="button" class="btn btn-primary px-3 py-1 fs-5 mt-4 drop">Conocer Más</button>
                 </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                    <img src="~/Imagenes/remodelacionCarousel.jpg" class="img-carousel d-block w-100" alt="...">
-                    <div class="mensaje-carousel carousel-caption d-md-block">
-                        <h5>Servicios de remodelación y albañilería</h5>
-                    </div>
-                    </div>
-                    <div class="carousel-item" data-bs-interval="2000">
-                        <img src="~/Imagenes/mantenimientopcCarousel.jpg" class="img-carousel d-block w-100" alt="...">
-                        <div class="mensaje-carousel carousel-caption d-md-block">
-                            <h5>Servicios de mantenimiento</h5>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="~/Imagenes/bellezaCarousel.jpg" class="img-carousel d-block w-100" alt="...">
-                        <div class="mensaje-carousel carousel-caption d-md-block">
-                            <h5>Servicios de salud y belleza</h5>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
-        </section>
+            <div class="carousel-item c-item">
+                <img src="~/Imagenes/remodelacionCarousel.jpg" class="d-block w-100 c-img" alt="...">
+                <div class="carousel-caption top-0 mt-5">
+                    <p class="mt-5 fs-3">Servicios de</p>
+                    <h1 class="display-1 fw-bolder text-capitalize">Remodelación y albañilería</h1>
+                    <button type="button" class="btn btn-primary px-3 py-1 fs-5 mt-4 drop">Conocer Más</button>
+                </div>
+            </div>
+            <div class="carousel-item c-item">
+                <img src="~/Imagenes/mantenimientopcCarousel.jpg" class="d-block w-100 c-img" alt="...">
+                <div class="carousel-caption top-0 mt-5">
+                    <p class="mt-5 fs-3">Servicios de</p>
+                    <h1 class="display-1 fw-bolder text-capitalize">Mantenimiento</h1>
+                    <button type="button" class="btn btn-primary px-3 py-1 fs-5 mt-4 drop">Conocer Más</button>
+                </div>
+            </div>
+            <div class="carousel-item c-item">
+                <img src="~/Imagenes/bellezaCarousel.jpg" class="d-block w-100 c-img" alt="...">
+                <div class="carousel-caption top-0 mt-5">
+                    <p class="mt-5 fs-3">Servicios de</p>
+                    <h1 class="display-1 fw-bolder text-capitalize">Salud y belleza</h1>
+                    <button type="button" class="btn btn-primary px-3 py-1 fs-5 mt-4 drop">Conocer Más</button>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
 
-            <h1 class="titulo">Servicios Disponibles</h1>
+    <h1 class="titulo">Servicios Disponibles</h1>
 
-            <section class="cards-content">
-            <div class="container">
-                <div class="row">
-                    @foreach (var item in Model)
-                    {
-                        <div class="col-lg-4">
-                            <div class="card-servicios card text-light bg-dark drop" style="width: 21rem; height:21rem;">
-                                <div class="card-body info">
-                                    <h5 class="card-title">@Html.DisplayFor(modelItem => item.NOMBRE_SER)</h5>
-                                    <p class="card-text">@Html.DisplayFor(modelItem => item.DESCRIPCION_BREVE)</p>
-                                    <h4 class="card-title">$ @Html.DisplayFor(modelItem => item.PRECIO_SER)</h4>
-                                    <h6 class="card-title">@Html.DisplayFor(modelItem => item.NOMBRE_CAT)</h6>
-                                </div>
-                                <div class="botonInfo">
-                                    <button onclick="masInformacion()" type="button" class="btn btn-primary">Más información</button>
-                                </div>
+    <section class="cards-content">
+        <div class="container">
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                    <div class="col-lg-4">
+                        <div class="card-servicios card text-light bg-dark drop" style="width: 21rem; height:21rem;">
+                            <div class="card-body info">
+                                <h5 class="card-title">@Html.DisplayFor(modelItem => item.NOMBRE_SER)</h5>
+                                <p class="card-text">@Html.DisplayFor(modelItem => item.DESCRIPCION_BREVE)</p>
+                                <h4 class="card-title">$ @Html.DisplayFor(modelItem => item.PRECIO_SER)</h4>
+                                <h6 class="card-title">@Html.DisplayFor(modelItem => item.NOMBRE_CAT)</h6>
+                            </div>
+                            <div class="botonInfo">
+                                <button onclick="masInformacion()" type="button" class="btn btn-primary">Más información</button>
                             </div>
                         </div>
-                    }
-                </div>
+                    </div>
+                }
             </div>
-        </section>
+        </div>
+    </section>
 
-        <script>
-            function masInformacion() {
-                swal({
-                    icon: "info",
-                    title: "Más informacion del servicio",
-                    text: "Para visualizar más información, registrate o ingresa a tu cuenta por medio del menú de navegación.",
-                    button: "Ok",
-                    closeOnClickOutside: false,
-                    closeOnEsc: false,
-                });
-            }
-        </script>
+    <script>
+        function masInformacion() {
+            swal({
+                icon: "info",
+                title: "Más informacion del servicio",
+                text: "Para visualizar más información, registrate o ingresa a tu cuenta por medio del menú de navegación.",
+                button: "Ok",
+                closeOnClickOutside: false,
+                closeOnEsc: false,
+            });
+        }
+    </script>
 
-        <script src="~/Scripts/sweetalert.min.js"></script>
-        <script src="~/Scripts/bootstrap.bundle.min.js"></script>
-        <script src="~/Scripts/bootstrap.min.js"></script>
-    </body>
+    <script src="~/Scripts/sweetalert.min.js"></script>
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
     </html>
 
