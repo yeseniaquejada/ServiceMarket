@@ -71,42 +71,39 @@
         </button>
     </div>
 
-    <h1 class="titulo">Servicios Disponibles</h1>
-
     <section class="cards-content">
-        <div class="container">
-            <div class="row">
                 @foreach (var item in Model)
                 {
-                    <div class="col-lg-4">
-                        <div class="card-servicios card text-light bg-dark drop" style="width: 21rem; height:21rem;">
-                            <div class="card-body info">
-                                <h5 class="card-title">@Html.DisplayFor(modelItem => item.NOMBRE_SER)</h5>
-                                <p class="card-text">@Html.DisplayFor(modelItem => item.DESCRIPCION_BREVE)</p>
-                                <h4 class="card-title">$ @Html.DisplayFor(modelItem => item.PRECIO_SER)</h4>
-                                <h6 class="card-title">@Html.DisplayFor(modelItem => item.NOMBRE_CAT)</h6>
+                    <div class="container">
+                        <div class="course drop">
+                            <div class="preview">
+                                <h2>@Html.DisplayFor(modelItem => item.NOMBRE_SER)</h2>
                             </div>
-                            <div class="botonInfo">
-                                <button onclick="masInformacion()" type="button" class="btn btn-primary">Más información</button>
+                            <div class="info"> 
+                                <h6>Categoría: @Html.DisplayFor(modelItem => item.NOMBRE_CAT)</h6>
+                                <h3>$ @Html.DisplayFor(modelItem => item.PRECIO_SER)</h3>
+                                <p class="p-trunc">@Html.DisplayFor(modelItem => item.DESCRIPCION_BREVE)</p>
+                                <button onclick="masInformacion()" type="button" class="btnCard">Más información</button>
                             </div>
                         </div>
                     </div>
                 }
-            </div>
-        </div>
     </section>
 
     <script>
         function masInformacion() {
             swal({
                 icon: "info",
-                title: "Más informacion del servicio",
-                text: "Para visualizar más información, registrate o ingresa a tu cuenta por medio del menú de navegación.",
+                title: "Más información del servicio",
+                text: "Para visualizar todos los detalles registrate o inicia sesión con tu cuenta.",
                 button: "Ok",
                 closeOnClickOutside: false,
                 closeOnEsc: false,
             });
         }
+
+        const trunc = document.querySelector('p-trunc');
+        trunc.innerText = trunc.innerText.substring(0, 100) + '...';
     </script>
 
     <script src="~/Scripts/sweetalert.min.js"></script>
