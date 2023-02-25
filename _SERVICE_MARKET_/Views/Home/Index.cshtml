@@ -15,6 +15,7 @@
     <title>@ViewBag.Title - Service Market</title>
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Content/Css/Index.css" rel="stylesheet" />
+    <link href="~/Content/all.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;600&display=swap" rel="stylesheet">
@@ -72,22 +73,29 @@
     </div>
 
     <section class="cards-content">
-                @foreach (var item in Model)
-                {
-                    <div class="container">
-                        <div class="course drop">
-                            <div class="preview">
-                                <h2>@Html.DisplayFor(modelItem => item.NOMBRE_SER)</h2>
-                            </div>
-                            <div class="info"> 
-                                <h6>Categoría: @Html.DisplayFor(modelItem => item.NOMBRE_CAT)</h6>
-                                <h3>$ @Html.DisplayFor(modelItem => item.PRECIO_SER)</h3>
-                                <p class="p-trunc">@Html.DisplayFor(modelItem => item.DESCRIPCION_BREVE)</p>
-                                <button onclick="masInformacion()" type="button" class="btnCard">Más información</button>
-                            </div>
-                        </div>
+        @foreach (var item in Model)
+        {
+        <div class="container">
+            <div class="course drop">
+                <div class="preview">
+                    <h2>@Html.DisplayFor(modelItem => item.NOMBRE_SER)</h2>
+                </div>
+                <div class="info">
+                    <h6>Categoría: @Html.DisplayFor(modelItem => item.NOMBRE_CAT)</h6>
+                    <h3>$ @Html.DisplayFor(modelItem => item.PRECIO_SER)</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
                     </div>
-                }
+                    <p class="p-trunc">@Html.DisplayFor(modelItem => item.DESCRIPCION_BREVE)</p>
+                    <button onclick="masInformacion()" type="button" class="btnCard">Más información</button>
+                </div>
+            </div>
+        </div>
+        }
     </section>
 
     <script>
@@ -109,6 +117,7 @@
     <script src="~/Scripts/sweetalert.min.js"></script>
     <script src="~/Scripts/bootstrap.bundle.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/all.min.js"></script>
 </body>
     </html>
 
