@@ -76,25 +76,25 @@
         @foreach (var item in Model)
         {
         <div class="container">
-            <div class="course drop">
-                <div class="preview">
-                    <h2>@Html.DisplayFor(modelItem => item.NOMBRE_SER)</h2>
-                </div>
-                <div class="info">
-                    <h6>Categoría: @Html.DisplayFor(modelItem => item.NOMBRE_CAT)</h6>
-                    <h3>$ @Html.DisplayFor(modelItem => item.PRECIO_SER)</h3>
-                    <div class="stars">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
+                <div class="course drop">
+                    <div class="preview">
+                        <h2>@Html.DisplayFor(modelItem => item.NOMBRE_SER)</h2>
                     </div>
-                    <p class="p-trunc">@Html.DisplayFor(modelItem => item.DESCRIPCION_BREVE)</p>
-                    <button onclick="masInformacion()" type="button" class="btnCard">Más información</button>
+                    <div class="info">
+                        <h6><b>Categoría:</b> @Html.DisplayFor(modelItem => item.NOMBRE_CAT)</h6>
+                        <h3><b>$</b> @Html.DisplayFor(modelItem => item.PRECIO_SER)</h3>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <p class="p-trunc">@Html.DisplayFor(modelItem => item.DESCRIPCION_BREVE)</p>
+                        <button onclick="masInformacion()" type="button" class="btnCard">Más información</button>
+                    </div>
                 </div>
             </div>
-        </div>
         }
     </section>
 
