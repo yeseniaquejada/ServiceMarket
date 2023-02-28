@@ -1,17 +1,15 @@
-﻿body {
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'League Spartan', sans-serif;
     font-weight: 300;
-}
-
-#logo {
-    width: 65px;
-    height: 65px;
-}
-
-#service {
-    color: #1b6bc2;
-    font-size: 30px;
-    font-weight: bold; 
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 .img-carousel {

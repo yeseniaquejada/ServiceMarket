@@ -33,7 +33,7 @@
                 <div class="carousel-caption top-0 mt-5">
                     <p class="mt-5 fs-3">Servicios de</p>
                     <h1 class="display-1 fw-bolder text-capitalize">Trabajos domésticos</h1>
-                    <button type="button" class="btn btn-primary px-3 py-1 fs-5 mt-4 drop">Conocer Más</button>
+                    <button type="button" class="btnBuscador btn-primary px-3 py-1 fs-5 mt-4 drop">Conocer Más</button>
                 </div>
             </div>
             <div class="carousel-item c-item">
@@ -41,7 +41,7 @@
                 <div class="carousel-caption top-0 mt-5">
                     <p class="mt-5 fs-3">Servicios de</p>
                     <h1 class="display-1 fw-bolder text-capitalize">Remodelación y albañilería</h1>
-                    <button type="button" class="btn btn-primary px-3 py-1 fs-5 mt-4 drop">Conocer Más</button>
+                    <button type="button" class="btnBuscador btn-primary px-3 py-1 fs-5 mt-4 drop">Conocer Más</button>
                 </div>
             </div>
             <div class="carousel-item c-item">
@@ -49,7 +49,7 @@
                 <div class="carousel-caption top-0 mt-5">
                     <p class="mt-5 fs-3">Servicios de</p>
                     <h1 class="display-1 fw-bolder text-capitalize">Mantenimiento</h1>
-                    <button type="button" class="btn btn-primary px-3 py-1 fs-5 mt-4 drop">Conocer Más</button>
+                    <button type="button" class="btnBuscador btn-primary px-3 py-1 fs-5 mt-4 drop">Conocer Más</button>
                 </div>
             </div>
             <div class="carousel-item c-item">
@@ -57,7 +57,7 @@
                 <div class="carousel-caption top-0 mt-5">
                     <p class="mt-5 fs-3">Servicios de</p>
                     <h1 class="display-1 fw-bolder text-capitalize">Salud y belleza</h1>
-                    <button type="button" class="btn btn-primary px-3 py-1 fs-5 mt-4 drop">Conocer Más</button>
+                    <button type="button" class="btnBuscador bbtn-primary px-3 py-1 fs-5 mt-4 drop">Conocer Más</button>
                 </div>
             </div>
         </div>
@@ -79,7 +79,7 @@
                     <div class="preview">
                         <h2>@Html.DisplayFor(modelItem => item.NOMBRE_SER)</h2>
                     </div>
-                    <div class="info">
+                    <div class="informacionCard">
                         <h6><b>Categoría:</b> @Html.DisplayFor(modelItem => item.NOMBRE_CAT)</h6>
                         <h3><b>$</b> @Html.DisplayFor(modelItem => item.PRECIO_SER)</h3>
                         <div class="stars">
@@ -97,8 +97,8 @@
         }
     </section>
 
-    <div class="d-grid gap-2 col-6 mx-auto d-block">
-        <a href="@Url.Action("Index", "Home")" class="volver btn btn-outline-primary">Volver al inicio</a>
+    <div class="d-grid gap-2 col-6 mx-auto d-block volverInicio">
+        <a href="@Url.Action("Index", "Home")" class="btnBuscador btn btn-outline-primary">Volver al inicio</a>
     </div>
 
     <script>

@@ -153,8 +153,11 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Imagenes\bellezaCarousel.jpg" />
+    <Content Include="Imagenes\Limpieza.jpg" />
     <Content Include="Imagenes\limpiezaCarousel.jpg" />
+    <Content Include="Imagenes\mantenimientoCarros.jpg" />
     <Content Include="Imagenes\mantenimientopcCarousel.jpg" />
+    <Content Include="Imagenes\Peluqueria.jpg" />
     <Content Include="Imagenes\PQR.jpg" />
     <Content Include="Imagenes\remodelacionCarousel.jpg" />
     <Content Include="Logos\logo abajo.png" />

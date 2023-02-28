@@ -1,6 +1,15 @@
-﻿body {
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'League Spartan', sans-serif;
     font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 .c-item {
@@ -13,7 +22,7 @@
     filter: brightness(0.6);
 }
 
-.btn {
+.btnCarousel {
     background: #1b6bc2;
     border: 1px solid transparent;
     box-shadow: 0px 5px 10px rgba(0,0,0,.2);
@@ -26,13 +35,13 @@
     border-radius: 10px;
 }
 
-.btn:hover {
-    background: #fff;
-    color: #1b6bc2;
-    border: 1px solid #1b6bc2;
-    transform: scale(1.05);
-    font-weight: bold;
-}
+    .btnCarousel:hover {
+        background: #fff;
+        color: #1b6bc2;
+        border: 1px solid #1b6bc2;
+        transform: scale(1.05);
+        font-weight: bold;
+    }
 
 .drop {
     filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.9));
@@ -75,13 +84,13 @@
     position: relative;
 }
 
-.info {
+.informacionCard {
     padding: 35px;
     position: relative;
     width: 100%;
 }
 
-    .info p {
+    .informacionCard p {
         font-size: 20px;
     }
 
@@ -123,11 +132,11 @@
             margin: 10px 0 0;
         }
 
-    .info h2 {
+    .informacionCard h2 {
         margin-top: 20px;
     }
 
-    .info p {
+    .informacionCard p {
         margin-bottom: 50px;
     }
 

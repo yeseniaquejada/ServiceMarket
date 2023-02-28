@@ -1,6 +1,15 @@
-﻿body {
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'League Spartan', sans-serif;
     font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
     color: white;
 }
 
@@ -10,6 +19,25 @@
 
 .bg-dark-x {
     background-color: #1e2126 !important;
+}
+
+.c-imgL {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.4);
+}
+
+.c-itemL {
+    height: 100vh;
+}
+
+.textP {
+    margin-top: 50%;
+    font-size: 25px;
+}
+
+.textH2 {
+    font-size: 70px;
 }
 
 .form-control,

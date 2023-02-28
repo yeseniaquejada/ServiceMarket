@@ -17,7 +17,7 @@ body {
     filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.9));
 }
 
-main .container {
+main .containerPQR {
     position: relative;
     display: flex;
     justify-content: center;
@@ -50,14 +50,14 @@ main .container {
     padding: 40px;
 }
 
-h2 {
+#tituloPQR {
     position: relative;
     padding-bottom: 10px;
     margin-bottom: 10px;
     font-weight: bold;
 }
 
-    h2::after {
+    #tituloPQR::after {
         content: '';
         position: absolute;
         left: 50%;
@@ -93,7 +93,7 @@ h2 {
     resize: none;
 }
 
-.btn {
+.btnPQR {
     width: 80%;
     padding: 0.5rem 1rem;
     font-size: 1.1rem;
@@ -107,7 +107,7 @@ h2 {
     margin-top: 15px;
 }
 
-    .btn:hover {
+    .btnPQR:hover {
         background: #fff;
         color: #1b6bc2;
         border: 1px solid #1b6bc2;
