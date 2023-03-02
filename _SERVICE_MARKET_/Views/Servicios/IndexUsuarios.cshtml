@@ -1,7 +1,7 @@
 ﻿
 @{
     ViewBag.Title = "Página principal";
-    Layout = null;
+    Layout = "~/Views/Shared/Layout_U.cshtml";
 }
 
 <!DOCTYPE html>
@@ -21,16 +21,6 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-dark bg-dark fixed-top">
-            <div class="container-fluid">
-                <img id="logo" src="~/Logos/logo.png" />
-                <a id="service" class="navbar-brand" href="@Url.Action("IndexUsuarios", "Servicios")">Service Market</a>
-                <h2></h2>
-            </div>
-        </nav>
-    </header>
-
     <section>
         <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -108,44 +98,11 @@
 
     <section>
         <h1 class="titulo">Testimonios</h1>
-        
-    </section>
 
-    <footer>
-        <div class="footer-col">
-            <h4>Service Market</h4>
-            <ul class="ul">
-                <li><a href="#">Sobre nosotros</a></li>
-                <li><a href="#">Nuestros servicios</a></li>
-                <li><a href="#">Términos y condiciones</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>Ayuda      </h4>
-            <ul class="ul">
-                <li><a href="@Url.Action("PQR", "Servicios")">PQR</a></li>
-                <li><a href="@Url.Action("preguntasFrecuentes", "Servicios")">Preguntas frecuentes</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>Desarrolladoras</h4>
-            <ul class="ul">
-                <li><a href="#">Yesenia Quejada Rojas</a></li>
-                <li><a href="#">Valentina Zapata Florez</a></li>
-                <li><a href="#">&copy; @DateTime.Now.Year</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>Síguenos</h4>
-            <div class="links">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-    </footer>
+    </section>
 
     <script src="~/Scripts/bootstrap.bundle.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/all.min.js"></script>
 </body>
 </html>

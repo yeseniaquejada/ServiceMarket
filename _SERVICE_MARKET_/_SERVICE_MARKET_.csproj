@@ -142,7 +142,6 @@
     <Content Include="Content\Css\Acceso.css" />
     <Content Include="Content\Css\Buscar.css" />
     <Content Include="Content\Css\Index.css" />
-    <Content Include="Content\Css\informacionPublicaciones.css" />
     <Content Include="Content\Css\Layout.css" />
     <Content Include="Content\Css\IndexUsuarios.css" />
     <Content Include="Content\Css\PQR.css" />
@@ -159,6 +158,7 @@
     <Content Include="Imagenes\Home\Mantenimiento.jpg" />
     <Content Include="Imagenes\Login\Salud_Belleza.jpg" />
     <Content Include="Imagenes\PQR.jpg" />
+    <Content Include="Imagenes\PQR2.jpg" />
     <Content Include="Imagenes\Registrar\Mantenimiento.jpg" />
     <Content Include="Imagenes\Registrar\Remodelacion_Albañileria.jpg" />
     <Content Include="Imagenes\Registrar\Salud_Belleza.jpg" />
@@ -220,6 +220,7 @@
     <Content Include="Views\Servicios\ServiciosDisponiblesCliente.cshtml" />
     <Content Include="Views\Servicios\PublicarSolicitud.cshtml" />
     <Content Include="Views\Servicios\BuscarSerCliente.cshtml" />
+    <Content Include="Views\Shared\Layout_U.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

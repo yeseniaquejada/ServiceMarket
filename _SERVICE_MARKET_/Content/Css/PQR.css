@@ -46,6 +46,14 @@ main .containerPQR {
     filter: brightness(0.6);
 }
 
+.left2 {
+    height: 100%;
+    background: url(../../Imagenes/PQR2.jpg) no-repeat center;
+    background-size: cover;
+    height: 100%;
+    filter: brightness(0.6);
+}
+
 .right {
     padding: 40px;
 }
