@@ -1,6 +1,15 @@
-﻿body {
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'League Spartan', sans-serif;
     font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 .titulo {
@@ -11,87 +20,106 @@
     text-align: center;
 }
 
-.titulo1 {
-    margin-top: 110px;
-    color: #1b6bc2;
-    font-size: 40px;
-    font-weight: bold;
-    text-align: center;
-}
-
-.card-servicios {
-    margin-top: 15px;
-    height: 310px;
-}
-
-.botonInfo {
-    margin-bottom: 7px;
-}
-
-.botonInfo .btn{
-    color:white;
-    text-decoration: none;
-
-}
-
-.info {
-    overflow-y: scroll;
-}
-
-    .info::-webkit-scrollbar {
-        width: 10px;
-    }
-
-    .info::-webkit-scrollbar-track {
-        background: #3C4149;
-        border-radius: 50px
-    }
-
-    .info::-webkit-scrollbar-thumb {
-        background: #50565F;
-        border-radius: 50px;
-    }
-
-.card-servicios h5 {
-    font-weight: bold;
-    text-align: center;
-    font-size: 25px;
-}
-
-.card-servicios h6 {
-    font-weight: bold;
-    text-align: center;
-    font-size: 18px;
-}
-
-.card-servicios button {
-    margin-top: 15px;
-    transform: translateX(70%);
-}
-
-.carousel-categorias {
-    display: flex;
-}
-
-.card-categorias {
-    margin: 0.4cm;
-    width: calc(90%/3);
-    height: 30%;
-}
-
-.carousel-categorias img {
-    height: 250px;
-}
-
-.informacion-card h5 {
-    font-weight: bold;
-}
-
-.informacion-card button a {
-    color: white;
-    text-decoration: none;
-}
-
 .drop {
     filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.9));
+}
+
+
+.stars svg {
+    font-size: 1.3em;
+    color: #f67034;
+}
+
+.course {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px rgba(0,0,0,.2);
+    display: flex;
+    max-width: 100%;
+    overflow: hidden;
+    width: 1100px;
+    margin-top: 10px;
+}
+
+    .course h6 {
+        opacity: .9;
+        color: black;
+        letter-spacing: 1px;
+        font-size: 20px;
+    }
+
+    .course h2 {
+        letter-spacing: 1px;
+        margin: 5px 0;
+        text-align: center;
+    }
+
+.preview {
+    background-color: #1e2126;
+    color: #fff;
+    padding: 35px;
+    width: 300px;
+    position: relative;
+}
+
+.informacionCard {
+    padding: 35px;
+    position: relative;
+    width: 100%;
+}
+
+    .informacionCard p {
+        font-size: 20px;
+    }
+
+.btnCard {
+    background: #1b6bc2;
+    border: 1px solid transparent;
+    box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 20px;
+    position: absolute;
+    bottom: 5px;
+    right: 30px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+    border-radius: 10px;
+}
+
+    .btnCard:hover {
+        background: #fff;
+        color: #1b6bc2;
+        border: 1px solid #1b6bc2;
+        transform: scale(1.05);
+        font-weight: bold;
+    }
+
+@media(max-width: 768px) {
+    .course {
+        flex-direction: column;
+        width: 90%
+    }
+
+    .preview {
+        width: 100%;
+    }
+
+        .preview h2 {
+            margin: 10px 0 0;
+        }
+
+    .informacionCard h2 {
+        margin-top: 20px;
+    }
+
+    .informacionCard p {
+        margin-bottom: 50px;
+    }
+
+    .btnCard {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
 }
