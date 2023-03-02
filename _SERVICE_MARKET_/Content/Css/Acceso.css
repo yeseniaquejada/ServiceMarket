@@ -7,10 +7,6 @@
 body {
     font-family: 'League Spartan', sans-serif;
     font-weight: 300;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    color: white;
 }
 
 .bg-dark {
@@ -23,12 +19,14 @@ body {
 
 .c-imgL {
     height: 100%;
-    object-fit: cover;
+    background-size: cover;
     filter: brightness(0.4);
+    object-fit: cover;
 }
 
 .c-itemL {
     height: 100vh;
+    width: 100vh;
 }
 
 .textP {
@@ -37,41 +35,63 @@ body {
 }
 
 .textH2 {
-    font-size: 70px;
+    font-size: 4vw;
 }
 
 .form-control,
-.btn,
 .form-select {
     color: white !important;
     min-height: 3.125rem;
     line-height: initial;
 }
 
+.btnLogin {
+    background: #1b6bc2;
+    border: 1px solid transparent;
+    box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 20px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+    border-radius: 10px;
+}
+
+    .btnLogin:hover {
+        background: #fff;
+        color: #1b6bc2;
+        border: 1px solid #1b6bc2;
+        transform: scale(1.05);
+        font-weight: bold;
+    }
+
+.btnRegistrarse {
+    background: #1b6bc2;
+    border: 1px solid transparent;
+    box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 20px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+    border-radius: 10px;
+}
+
+    .btnRegistrarse:hover {
+        background: #fff;
+        color: #1b6bc2;
+        border: 1px solid #1b6bc2;
+        transform: scale(1.05);
+        font-weight: bold;
+    }
+
 #logo {
     width: 170px;
     height: 90px;
 }
 
-#logoR {
-    width: 90px;
-    height: 80px;
-}
-
-.info {
-    margin-left: 20px;
-}
-
-.carouselR {
-    height: 1150px;
-}
-
-h1, label, p {
+.containerInfo {
     color: white;
-}
-
-.registrarse {
-    padding: 10px;
-    font-size: 40px;
-    color: #1b6bc2;
 }
