@@ -13,6 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Service Market</title>
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/all.min.css" rel="stylesheet" />
     <link href="~/Content/Css/Publicar.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,65 +21,37 @@
 </head>
 
 <body>
-    <section>
-        <div class="publicacion">
-            <h1 id="titulo">Nueva publicación</h1>
-            <form action="@Url.Action("PublicarSolicitud","Servicios")" method="post">
-                <div class="mb-3">
-                    <label for="formGroupExampleInput" class="form-label">Nombre del servicio</label>
-                    <input name="NOMBRE_SER" type="text" class="form-control" id="formGroupExampleInput" placeholder="Escriba el nombre del servicio" required>
-                </div>
+    <main>
+        <div class="container containerP">
+            <div class="contact-box drop">
+                <div class="left3"></div>
+                <div class="right">
+                    <h2 id="tituloP">Nueva solicitud</h2>
+                    <form action="@Url.Action("PublicarSolicitud","Servicios")" method="post">
+                        <input type="text" class="field" placeholder="Escriba el nombre de la solicitud" name="NOMBRE_SER" required />
+                        <input type="number" class="field" placeholder="Digite el precio a pagar" name="PRECIO_SER" required />
+                        <textarea class="field area" placeholder="Escriba una descripción breve sobre el servicio solicitado" name="DESCRIPCION_BREVE" required></textarea>
+                        <textarea class="field area" placeholder="Escriba los términos y condiciones para el prestador de servicios" name="TERMINOS_SER" required></textarea>
+                        <select class="field" name="ID_CATEGORIA_FK" required>
+                            <option selected disabled>Categoría</option>
+                            <option value="1">Mantenimiento</option>
+                            <option value="2">Trabajos domésticos</option>
+                            <option value="3">Remodelación y Albañilería</option>
+                            <option value="4">Salud y belleza</option>
+                        </select>
+                        <input type="text" class="field" name="TIPO" value="Solicitud" required />
+                        <input type="text" class="field" placeholder="Escriba su número de identificación" name="N_IDENTIFICACION_USU_FK" required />
 
-                <label for="formGroupExampleInput" class="form-label">Precio</label>
-                <div class="input-group mb-3">
-                    <span class="input-group-text">$</span>
-                    <input name="PRECIO_SER" type="number" class="form-control" aria-label="Dollar amount (with dot and two decimal places)" placeholder="Digite el precio" required>
+                        <button class="btnP" type="submit">Publicar</button>
+                        <a href="@Url.Action("ServiciosDisponiblesCliente","Servicios")" class="btn btnP">Cancelar</a>
+                    </form>
                 </div>
-
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Descripción breve</label>
-                    <textarea name="DESCRIPCION_BREVE" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escriba una descripción breve sobre el servicio solicitado" required></textarea>
-                </div>
-
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Términos</label>
-                    <textarea name="TERMINOS_SER" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escriba los términos y condiciones para el prestador de servicios" required></textarea>
-                </div>
-
-                <div class="mb-3">
-                    <label for="formGroupExampleInput" class="form-label">Categoría</label>
-                    <select name="ID_CATEGORIA_FK" class="form-select" aria-label="Default select example" required>
-                        <option selected>-----</option>
-                        <option value="1">Mantenimiento</option>
-                        <option value="2">Trabajos domésticos</option>
-                        <option value="3">Remodelación y Albañilería</option>
-                        <option value="4">Salud y belleza</option>
-                    </select>
-                </div>
-
-                <div class="mb-3">
-                    <label for="formGroupExampleInput" class="form-label">Tipo</label>
-                    <input name="TIPO" type="text" class="form-control" id="formGroupExampleInput" value="Solicitud" required>
-                </div>
-
-                <div class="mb-3">
-                    <label for="formGroupExampleInput" class="form-label">Número de identificación</label>
-                    <input name="N_IDENTIFICACION_USU_FK" type="text" class="form-control" id="formGroupExampleInput" placeholder="Escriba su número de identificación" required>
-                </div>
-
-                <br />
-                <div class="buttons gap-3 d-flex">
-                    <button class="btn btn-primary col-4" type="submit">Publicar</button>
-                    <button class="btn btn-success col-4" type="button">
-                        <a class="a text-decoration-none" href="@Url.Action("ServiciosDisponiblesCliente","Servicios")">Cancelar</a>
-                    </button>
-                </div>
-            </form>
+            </div>
         </div>
-    </section>
-
+    </main>
 
     <script src="~/Scripts/bootstrap.bundle.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/all.min.js"></script>
 </body>
 </html>

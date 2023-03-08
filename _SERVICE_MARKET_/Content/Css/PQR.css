@@ -128,7 +128,7 @@ main .containerPQR {
         grid-template-columns: 2fr;
     }
 
-    .left {
+    .left,
     .left2 {
         height: 200px;
     }
