@@ -1,0 +1,161 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+<div class="contenedor">
+            <div class="carousel">
+                <div class="carousel__contenedor">
+                    <button aria-label="Anterior" class="carousel__anterior">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+
+                    <div class="carousel__lista">
+                        <div class="carousel__elemento">
+                            <img src="~/Imagenes/Usuarios/Testimonios/Albañileria.jpg" alt="albañileria">
+                        </div>
+                        <div class="carousel__elemento">
+                            <img src="~/Imagenes/Usuarios/Testimonios/Belleza.jpg" alt="belleza">
+                        </div>
+                        <div class="carousel__elemento">
+                            <img src="~/Imagenes/Usuarios/Testimonios/Limpieza.jpg" alt="limpieza">
+                        </div>
+                        <div class="carousel__elemento">
+                            <img src="~/Imagenes/Usuarios/Testimonios/Mantenimiento.jpg" alt="mantenimiento">
+                        </div>
+                        <div class="carousel__elemento">
+                            <img src="~/Imagenes/Usuarios/Testimonios/Remodelacion.jpg" alt="remodelacion">
+                        </div>
+                        <div class="carousel__elemento">
+                            <img src="~/Imagenes/Usuarios/Testimonios/Salud.jpg" alt="salud">
+                        </div>
+                    </div>
+
+                    <button aria-label="Siguiente" class="carousel__siguiente">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div role="tablist" class="carousel__indicadores"></div>
+            </div>
+        </div>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+<script>
+        window.addEventListener('load', function () {
+            new Glider(document.querySelector('.carousel__lista'), {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: '.carousel__indicadores',
+                arrows: {
+                    prev: '.carousel__anterior',
+                    next: '.carousel__siguiente'
+                },
+                responsive: [
+                    {
+                        // screens greater than >= 775px
+                        breakpoint: 450,
+                        settings: {
+                            // Set to `auto` and provide item width to adjust to viewport
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    }, {
+                        // screens greater than >= 1024px
+                        breakpoint: 800,
+                        settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 4
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+.contenedor {
+    max-width: 1200px;
+    width: 80%;
+    margin: auto;
+}
+
+.carousel__contenedor {
+    position: relative;
+}
+
+.carousel__anterior,
+.carousel__siguiente {
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: none;
+    top: calc(50% - 40px);
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    background: none;
+    color: black;
+    opacity: 90%;
+}
+
+    .carousel__anterior:hover,
+    .carousel__siguiente:hover {
+        opacity: 100%;
+    }
+
+.carousel__anterior {
+    left: -30px;
+}
+
+.carousel__siguiente {
+    right: -30px;
+}
+
+.carousel__lista {
+    overflow: hidden;
+}
+
+.carousel__elemento {
+    text-align: center;
+}
+
+.carousel__indicadores .glider-dot {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: #fff;
+    opacity: .2;
+    border-radius: 0;
+}
+
+    .carousel__indicadores .glider-dot:hover {
+        opacity: .5;
+    }
+
+    .carousel__indicadores .glider-dot.active {
+        opacity: 1;
+    }
+
+@media screen and (max-width: 800px) {
+    body {
+        padding: 40px 0;
+    }
+
+    .contenido-principal {
+        flex-direction: column;
+    }
+
+        .contenido-principal > * {
+            width: 100%;
+        }
+}
