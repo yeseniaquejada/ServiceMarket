@@ -1,0 +1,156 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.titulo {
+    margin-top: 50px;
+    color: #1b6bc2;
+    font-size: 2.2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.c-item {
+    height: 480px;
+}
+
+.c-img {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.btnCarousel {
+    background: #1b6bc2;
+    border: 1px solid transparent;
+    box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 20px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+    border-radius: 10px;
+}
+
+    .btnCarousel:hover {
+        background: #fff;
+        color: #1b6bc2;
+        border: 1px solid #1b6bc2;
+        transform: scale(1.05);
+        font-weight: bold;
+    }
+
+
+.drop {
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.9));
+}
+
+.stars svg {
+    font-size: 1.3em;
+    color: #f67034;
+}
+
+.course {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px rgba(0,0,0,.2);
+    display: flex;
+    max-width: 100%;
+    overflow: hidden;
+    width: 1100px;
+    margin-top: 10px;
+}
+
+    .course h6 {
+        opacity: .9;
+        color: black;
+        letter-spacing: 1px;
+        font-size: 20px;
+    }
+
+    .course h2 {
+        letter-spacing: 1px;
+        margin: 5px 0;
+        text-align: center;
+    }
+
+.preview {
+    background-color: #1e2126;
+    color: #fff;
+    padding: 35px;
+    width: 300px;
+    position: relative;
+}
+
+.informacionCard {
+    padding: 35px;
+    position: relative;
+    width: 100%;
+}
+
+    .informacionCard p {
+        font-size: 20px;
+    }
+
+.btnCard {
+    background: #1b6bc2;
+    border: 1px solid transparent;
+    box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 20px;
+    position: absolute;
+    bottom: 5px;
+    right: 30px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+    border-radius: 10px;
+}
+
+    .btnCard:hover {
+        background: #fff;
+        color: #1b6bc2;
+        border: 1px solid #1b6bc2;
+        transform: scale(1.05);
+        font-weight: bold;
+    }
+
+@media(max-width: 768px) {
+    .course {
+        flex-direction: column;
+        width: 90%
+    }
+
+    .preview {
+        width: 100%;
+    }
+
+        .preview h2 {
+            margin: 10px 0 0;
+        }
+
+    .informacionCard h2 {
+        margin-top: 20px;
+    }
+
+    .informacionCard p {
+        margin-bottom: 50px;
+    }
+
+    .btnCard {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
