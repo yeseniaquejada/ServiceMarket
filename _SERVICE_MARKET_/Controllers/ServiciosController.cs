@@ -31,6 +31,13 @@ namespace _SERVICE_MARKET_.Controllers
             return View(ma.ConsultarServicios());
         }
 
+        public ActionResult BuscarCliente(string NOMBRE_SER)
+        {
+            MantenimientoServicios ma = new MantenimientoServicios();
+            List<Servicio> lista = ma.BuscarServicios(NOMBRE_SER);
+            return View(lista);
+        }
+
         public ActionResult PublicarSolicitud()
         {
             return View();
@@ -54,12 +61,7 @@ namespace _SERVICE_MARKET_.Controllers
             return RedirectToAction("ServiciosDisponiblesCliente");
         }
 
-        public ActionResult BuscarSerCliente(string NOMBRE_SER)
-        {
-            MantenimientoServicios ma = new MantenimientoServicios();
-            List<Servicio> lista = ma.BuscarServicios(NOMBRE_SER);
-            return View(lista);
-        }
+        
 
 
 

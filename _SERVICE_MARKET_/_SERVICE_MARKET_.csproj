@@ -145,12 +145,17 @@
     <Content Include="Content\Css\Layout.css" />
     <Content Include="Content\Css\IndexUsuarios.css" />
     <Content Include="Content\Css\PQR.css" />
-    <Content Include="Content\Css\preguntasFrecuentes.css" />
+    <Content Include="Content\Css\PreguntasFrecuentes.css" />
     <Content Include="Content\Css\Publicar.css" />
-    <Content Include="Content\Css\ServiciosDisponibles.css" />
+    <Content Include="Content\Css\Disponibles.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Imagenes\Cliente\Categorias\Mantenimiento.jpg" />
+    <Content Include="Imagenes\Cliente\Categorias\Remodelacion_Albañileria.jpg" />
+    <Content Include="Imagenes\Cliente\Categorias\Salud_Belleza.jpg" />
+    <Content Include="Imagenes\Cliente\Categorias\Trabajos_Domesticos.jpg" />
+    <Content Include="Imagenes\Cliente\PublicarSolicitud.jpg" />
     <Content Include="Imagenes\Home\Salud_Belleza.jpg" />
     <Content Include="Imagenes\Login\Trabajos_Domesticos.jpg" />
     <Content Include="Imagenes\Home\Trabajos_Domesticos.jpg" />
@@ -169,14 +174,6 @@
     <Content Include="Imagenes\Usuarios\Botones\obrerobtn.png" />
     <Content Include="Imagenes\Usuarios\Remodelacion_Albañileria.jpg" />
     <Content Include="Imagenes\Usuarios\Salud_Belleza.jpg" />
-    <Content Include="Imagenes\Cliente\Categorias\Albañileria.jpg" />
-    <Content Include="Imagenes\Cliente\Categorias\Belleza.jpg" />
-    <Content Include="Imagenes\Cliente\Categorias\flecha-derecha.png" />
-    <Content Include="Imagenes\Cliente\Categorias\flecha-izquierda.png" />
-    <Content Include="Imagenes\Cliente\Categorias\Limpieza.jpg" />
-    <Content Include="Imagenes\Cliente\Categorias\Mantenimiento.jpg" />
-    <Content Include="Imagenes\Cliente\Categorias\Remodelacion.jpg" />
-    <Content Include="Imagenes\Cliente\Categorias\Salud.jpg" />
     <Content Include="Imagenes\Usuarios\Testimonios\1.jpg" />
     <Content Include="Imagenes\Usuarios\Testimonios\2.jpg" />
     <Content Include="Imagenes\Usuarios\Testimonios\3.jpg" />
@@ -233,8 +230,8 @@
     <Content Include="Views\Shared\Layout_C.cshtml" />
     <Content Include="Views\Servicios\ServiciosDisponiblesCliente.cshtml" />
     <Content Include="Views\Servicios\PublicarSolicitud.cshtml" />
-    <Content Include="Views\Servicios\BuscarSerCliente.cshtml" />
     <Content Include="Views\Shared\Layout_U.cshtml" />
+    <Content Include="Views\Servicios\BuscarCliente.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
