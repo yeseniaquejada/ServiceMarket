@@ -102,7 +102,7 @@ namespace _SERVICE_MARKET_.Controllers
         public ActionResult informacionPublicaciones(int ID)
         {
             MantenimientoServicios ma = new MantenimientoServicios();
-            Servicio ser = ma.Informacion_Servicios(ID);
+            Servicio ser = ma.informacionServicios(ID);
             return View(ser);
         }
         public ActionResult BuscarSer(string NOMBRE_SER)

@@ -28,5 +28,10 @@ namespace _SERVICE_MARKET_.Controllers
             List<Servicio> lista = ma.BuscarServicios(NOMBRE_SER);
             return View(lista);
         }
+
+        public ActionResult Categorias()
+        { 
+            return View();
+        }
     }
 }

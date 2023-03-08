@@ -79,7 +79,7 @@ namespace _SERVICE_MARKET_.Models
 
 
         //METODO PARA CONSULTAR MAS INFORMACION SOBRE UN SERVICIO
-        public Servicio Informacion_Servicios(int ID_SERVICIO)
+        public Servicio informacionServicios(int ID_SERVICIO)
         {
             cadena.Open();
             SqlCommand Comand = new SqlCommand("CONSULTAR_PUBLICACION", cadena as SqlConnection);
