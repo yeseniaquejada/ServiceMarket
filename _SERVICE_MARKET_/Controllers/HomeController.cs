@@ -12,7 +12,7 @@ namespace _SERVICE_MARKET_.Controllers
             return View(ma.ConsultarServicios());
         }
 
-        public ActionResult preguntasFrecuentes()
+        public ActionResult PreguntasFrecuentes()
         {
             return View();
         }

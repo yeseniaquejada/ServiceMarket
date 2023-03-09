@@ -93,7 +93,7 @@
                                 <i class="fa-regular fa-star"></i>
                             </div>
                             <p class="p-trunc">@Html.DisplayFor(modelItem => item.DESCRIPCION_BREVE)</p>
-                            <button type="button" class="btnCard">Más información</button>
+                            <button type="submit" class="btn">@Html.ActionLink("Más información", "InformacionPublicaciones", new { ID = item.ID_SERVICIO}, new { @class = "btnCard text-decoration-none" })</button>
                         </div>
                     </div>
                 </div>

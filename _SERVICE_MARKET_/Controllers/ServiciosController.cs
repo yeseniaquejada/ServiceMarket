@@ -12,7 +12,7 @@ namespace _SERVICE_MARKET_.Controllers
             return View();
         }
 
-        public ActionResult preguntasFrecuentes()
+        public ActionResult PreguntasFrecuentes()
         {
             return View();
         }
@@ -61,6 +61,13 @@ namespace _SERVICE_MARKET_.Controllers
             return RedirectToAction("ServiciosDisponiblesCliente");
         }
 
+        public ActionResult InformacionPublicaciones(int ID)
+        {
+            MantenimientoServicios ma = new MantenimientoServicios();
+            Servicio ser = ma.informacionPublicacion(ID);
+            return View(ser);
+        }
+
         
 
 
@@ -101,12 +108,7 @@ namespace _SERVICE_MARKET_.Controllers
 
 
 
-        public ActionResult informacionPublicaciones(int ID)
-        {
-            MantenimientoServicios ma = new MantenimientoServicios();
-            Servicio ser = ma.informacionServicios(ID);
-            return View(ser);
-        }
+        
         public ActionResult BuscarSer(string NOMBRE_SER)
         {
             MantenimientoServicios ma = new MantenimientoServicios();

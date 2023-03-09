@@ -1,8 +1,8 @@
 ﻿@model _SERVICE_MARKET_.Models.Servicio
 
 @{
-    ViewBag.Title = "Informacion publicaciones";
-    Layout = "~/Views/Shared/Layout_CP.cshtml";
+    ViewBag.Title = "Información Publicaciones";
+    Layout = "~/Views/Shared/Layout_C.cshtml";
 }
 
 <!DOCTYPE html>
@@ -13,73 +13,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Service Market</title>
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/Content/Css/informacionPublicaciones.css" rel="stylesheet" />
+    <link href="~/Content/Css/MasInformacion.css" rel="stylesheet" />
+    <link href="~/Content/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <section>
-        <h1 class="titulo">@Html.DisplayFor(model => model.NOMBRE_SER)</h1>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="~/Imagenes/limpiezac1.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="~/Imagenes/mantenimientoc2.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="~/Imagenes/remodelacionc3.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="~/Imagenes/salud y bellezac4.jpg" class="d-block w-100" alt="...">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
+    <h1 class="titulo">@Html.DisplayFor(model => model.NOMBRE_SER)</h1>
+    <div class="container informacion">
+        <div class="row">
+            <div class="col-6">
+                <p><span class="fw-bold">Descripción:</span> @Html.DisplayFor(model => model.DESCRIPCION_BREVE)</p>
+                <p><span class="fw-bold">Términos:</span> @Html.DisplayFor(model => model.TERMINOS_SER)</p>
+            </div>
+            <div class="col-6">
+                <p><span class="fw-bold">Precio:</span> $@Html.DisplayFor(model => model.PRECIO_SER)</p>
+                <p><span class="fw-bold">Categoría:</span> @Html.DisplayFor(model => model.NOMBRE_CAT)</p>
+                <p><span class="fw-bold">Prestador de servicios: </span>@Html.DisplayFor(model => model.NOMBRE_USU) @Html.DisplayFor(model => model.APELLIDOS_USU)</p>
+                <p><span class="fw-bold">Contacto: </span> +@Html.DisplayFor(model => model.CELULAR_USU)</p>
+                <p><span class="fw-bold">Ciudad: </span> @Html.DisplayFor(model => model.NOMBRE_CIUDAD)</p>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
                 </div>
-                <div class="informacion col-sm-6">
-                    <h4><b>Precio:</b> $@Html.DisplayFor(model => model.PRECIO_SER)</h4>
-                    <h4><b>Descripción:</b> @Html.DisplayFor(model => model.DESCRIPCION_BREVE)</h4>
-                    <h4><b>Términos:</b> @Html.DisplayFor(model => model.TERMINOS_SER)</h4>
-                    <h4><b>Categoría:</b> @Html.DisplayFor(model => model.NOMBRE_CAT)</h4>
-                    <h4><b>Ciudad:</b> @Html.DisplayFor(model => model.NOMBRE_CIUDAD)</h4>
+                <div>
+                    <a href="https://api.whatsapp.com/send?phone=@Html.DisplayFor(model => model.CELULAR_USU)" class="btn btnAdquirir">Adquirir servicio</a>
+                    <a href="@Url.Action("ServiciosDisponiblesCliente", "Servicios")" class="btn btnAdquirir">Volver al inicio</a>
                 </div>
-
-                <div class="informacion col-sm-1">
-                    <img src="~/Imagenes/usuario.png" width="100" height="100" class="imgUsuario">
-                </div>
-                <div class="informacion col-sm-5">
-                    <h4><b>Prestador de servicio:</b> @Html.DisplayFor(model => model.NOMBRE_USU) @Html.DisplayFor(model => model.APELLIDOS_USU)</h4>
-                    <h4><b>Contacto:</b> +@Html.DisplayFor(model => model.CELULAR_USU)</h4>
-                </div>
-                <div class="col-sm-3 btn-group">
-                    <a href="https://api.whatsapp.com/send?phone=@Html.DisplayFor(model => model.CELULAR_USU)" class="btn btn-primary" style="font-size:20px; height: 40px; text-decoration: none; margin-top: 25px;">
-                        Adquirir servicio
-                    </a>
-                </div>
-                <div class="col-sm-3 btn-group">
-                    @Html.ActionLink("Volver al inicio", "ServiciosDisponibles", new { }, new { @class = "btn btn-outline-primary", style = "font-size:20px; height: 40px; text-decoration: none; margin-top: 25px;" })
-                </div>
-
             </div>
         </div>
-    </section>
-    
+    </div>
+
+    <div class="carouselImagenes">
+        <div class="contenedor">
+            <div class="carousel">
+                <div class="carousel__contenedor">
+                    <button aria-label="Anterior" class="carousel__anterior">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+
+                    <div class="carousel__lista">
+                        <div class="carousel__elemento">
+                            <img src="~/Imagenes/Cliente/MasInformacion/Albañileria.jpg" alt="albañileria">
+                        </div>
+                        <div class="carousel__elemento">
+                            <img src="~/Imagenes/Cliente/MasInformacion/Belleza.jpg" alt="belleza">
+                        </div>
+                        <div class="carousel__elemento">
+                            <img src="~/Imagenes/Cliente/MasInformacion/Limpieza.jpg" alt="limpieza">
+                        </div>
+                        <div class="carousel__elemento">
+                            <img src="~/Imagenes/Cliente/MasInformacion/Mantenimiento.jpg" alt="mantenimiento">
+                        </div>
+                        <div class="carousel__elemento">
+                            <img src="~/Imagenes/Cliente/MasInformacion/Remodelacion.jpg" alt="remodelacion">
+                        </div>
+                        <div class="carousel__elemento">
+                            <img src="~/Imagenes/Cliente/MasInformacion/Salud.jpg" alt="salud">
+                        </div>
+                    </div>
+
+                    <button aria-label="Siguiente" class="carousel__siguiente">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div role="tablist" class="carousel__indicadores"></div>
+            </div>
+        </div>
+
+        <!--BOTON PARA LAS CATEGORIAS-->
+        <center><a href="@Url.Action("", "")" class="btn btnCat">Ver categorías</a></center>
+    </div>
+
+    <script>
+        window.addEventListener('load', function () {
+            new Glider(document.querySelector('.carousel__lista'), {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: '.carousel__indicadores',
+                arrows: {
+                    prev: '.carousel__anterior',
+                    next: '.carousel__siguiente'
+                },
+                responsive: [
+                    {
+                        // screens greater than >= 775px
+                        breakpoint: 450,
+                        settings: {
+                            // Set to `auto` and provide item width to adjust to viewport
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    }, {
+                        // screens greater than >= 1024px
+                        breakpoint: 800,
+                        settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 4
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
 
     <script src="~/Scripts/bootstrap.bundle.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 </body>
 </html>

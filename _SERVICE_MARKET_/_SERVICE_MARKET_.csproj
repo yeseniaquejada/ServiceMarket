@@ -144,6 +144,7 @@
     <Content Include="Content\Css\Index.css" />
     <Content Include="Content\Css\Layout.css" />
     <Content Include="Content\Css\IndexUsuarios.css" />
+    <Content Include="Content\Css\MasInformacion.css" />
     <Content Include="Content\Css\PQR.css" />
     <Content Include="Content\Css\PreguntasFrecuentes.css" />
     <Content Include="Content\Css\Publicar.css" />
@@ -155,6 +156,12 @@
     <Content Include="Imagenes\Cliente\Categorias\Remodelacion_Albañileria.jpg" />
     <Content Include="Imagenes\Cliente\Categorias\Salud_Belleza.jpg" />
     <Content Include="Imagenes\Cliente\Categorias\Trabajos_Domesticos.jpg" />
+    <Content Include="Imagenes\Cliente\MasInformacion\Albañileria.jpg" />
+    <Content Include="Imagenes\Cliente\MasInformacion\Belleza.jpg" />
+    <Content Include="Imagenes\Cliente\MasInformacion\Limpieza.jpg" />
+    <Content Include="Imagenes\Cliente\MasInformacion\Mantenimiento.jpg" />
+    <Content Include="Imagenes\Cliente\MasInformacion\Remodelacion.jpg" />
+    <Content Include="Imagenes\Cliente\MasInformacion\Salud.jpg" />
     <Content Include="Imagenes\Cliente\PublicarSolicitud.jpg" />
     <Content Include="Imagenes\Home\Salud_Belleza.jpg" />
     <Content Include="Imagenes\Login\Trabajos_Domesticos.jpg" />
@@ -220,18 +227,18 @@
     <Content Include="Views\Acceso\Registrar.cshtml" />
     <Content Include="Views\Shared\Layout_P.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\preguntasFrecuentes.cshtml" />
+    <Content Include="Views\Home\PreguntasFrecuentes.cshtml" />
     <Content Include="Views\Home\PQR.cshtml" />
-    <Content Include="Views\Servicios\informacionPublicaciones.cshtml" />
     <Content Include="Views\Home\Buscar.cshtml" />
     <Content Include="Views\Servicios\IndexUsuarios.cshtml" />
     <Content Include="Views\Servicios\PQR.cshtml" />
-    <Content Include="Views\Servicios\preguntasFrecuentes.cshtml" />
+    <Content Include="Views\Servicios\PreguntasFrecuentes.cshtml" />
     <Content Include="Views\Shared\Layout_C.cshtml" />
     <Content Include="Views\Servicios\ServiciosDisponiblesCliente.cshtml" />
     <Content Include="Views\Servicios\PublicarSolicitud.cshtml" />
     <Content Include="Views\Shared\Layout_U.cshtml" />
     <Content Include="Views\Servicios\BuscarCliente.cshtml" />
+    <Content Include="Views\Servicios\InformacionPublicaciones.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
