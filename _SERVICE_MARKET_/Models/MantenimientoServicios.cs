@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Web;
 
 namespace _SERVICE_MARKET_.Models
 {
@@ -9,10 +10,12 @@ namespace _SERVICE_MARKET_.Models
         /*CADENA DE CONEXION*/
         IDbConnection cadena = DbCommon.Conexion();
 
+        /*VARIABLE SESION CON LA IDENTIFICACION DEL USUARIO QUE INGRESO*/
+        Usuario usuario = HttpContext.Current.Session["Usuario"] as Usuario;
+
         //METODO PARA AGREGAR SERVICIOS
         public int AgregarServicio(Servicio oServicios)
         {
-
             cadena.Open();
             SqlCommand Comand = new SqlCommand("CREAR_SERVICIOS", cadena as SqlConnection);
             Comand.CommandType = CommandType.StoredProcedure;
@@ -21,7 +24,7 @@ namespace _SERVICE_MARKET_.Models
             Comand.Parameters.Add(new SqlParameter("@DESCRIPCION_BREVE", oServicios.DESCRIPCION_BREVE));
             Comand.Parameters.Add(new SqlParameter("@TERMINOS_SER", oServicios.TERMINOS_SER));
             Comand.Parameters.Add(new SqlParameter("@TIPO", oServicios.TIPO));
-            Comand.Parameters.Add(new SqlParameter("@N_IDENTIFICACION_USU_FK", oServicios.N_IDENTIFICACION_USU_FK));
+            Comand.Parameters.Add(new SqlParameter("@N_IDENTIFICACION_USU_FK", usuario.N_IDENTIFICACION_USU));
             Comand.Parameters.Add(new SqlParameter("@ID_CATEGORIA_FK", oServicios.ID_CATEGORIA_FK));
             int Publicacion = Comand.ExecuteNonQuery();
             cadena.Close();
