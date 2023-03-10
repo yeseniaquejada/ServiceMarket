@@ -4,6 +4,7 @@ using System.Web.Mvc;
 
 namespace _SERVICE_MARKET_.Controllers
 {
+    [Authorize]
     public class ServiciosController : Controller
     {
         // USUARIOS

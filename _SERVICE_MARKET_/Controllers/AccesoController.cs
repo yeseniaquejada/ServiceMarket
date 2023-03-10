@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Security.Cryptography;
 using System.Text;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace _SERVICE_MARKET_.Controllers
 {
@@ -110,6 +111,7 @@ namespace _SERVICE_MARKET_.Controllers
             /*ACCESO A VISTAS*/
             if (oUsuarios.N_IDENTIFICACION_USU != "0")
             {
+                FormsAuthentication.SetAuthCookie(oUsuarios.N_IDENTIFICACION_USU, false);
                 Session["Usuario"] = oUsuarios;
                 return RedirectToAction("IndexUsuarios", "Servicios");
             }
@@ -123,6 +125,7 @@ namespace _SERVICE_MARKET_.Controllers
         /*METODO PARA CERRAR SESION*/
         public ActionResult CerrarSesion()
         {
+            FormsAuthentication.SignOut();
             Session["Usuario"] = null;
             return RedirectToAction("Index", "Home");
         }
