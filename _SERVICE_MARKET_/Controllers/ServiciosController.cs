@@ -54,7 +54,7 @@ namespace _SERVICE_MARKET_.Controllers
                 PRECIO_SER = decimal.Parse(collection["PRECIO_SER"].ToString()),
                 DESCRIPCION_BREVE = collection["DESCRIPCION_BREVE"],
                 TERMINOS_SER = collection["TERMINOS_SER"],
-                TIPO = collection["TIPO"],
+                TIPO = "Solicitud",
                 N_IDENTIFICACION_USU_FK = collection["N_IDENTIFICACION_USU_FK"],
                 ID_CATEGORIA_FK = int.Parse(collection["ID_CATEGORIA_FK"])
             };
