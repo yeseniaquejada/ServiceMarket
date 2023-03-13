@@ -17,16 +17,109 @@
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;600&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-dark">
-    <section class="row g-0">
-        <div class="px-lg-5 pt-lg-4 pb-lg-3 p-2">
-            <img id="logo" src="~/Logos/logo derecha.png" class="img-fluid">
+<body class="registro">
+    <div class="container bg-dark">
+        <div>
+            <img id="logo1" src="~/Logos/logo derecha.png" class="img-fluid">
+            <h1 class="font-weight-bold" align="center" style="color:white;">Registrarse</h1>
         </div>
-        <h1 class="font-weight-bold mb-3" align="center" style="color:white;">Registrarse</h1>
         <form action="@Url.Action("Registrar","Acceso")" method="post" autocomplete="off">
-            
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Tipo de documento:</span>
+                    <select name="TIPO_DOC_USU" class="bg-dark-x border-0" required>
+                        <option selected disabled>-----</option>
+                        <option value="Cedula de ciudadania">Cédula de ciudadanía</option>
+                        <option value="Cedula de extranjeria">Cédula de extranjería</option>
+                        <option value="Pasaporte">Pasaporte</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <span class="details">Número de identificación:</span>
+                    <input class="bg-dark-x border-0" name="N_IDENTIFICACION_USU" type="text" placeholder="Ingresa tu número de identificación" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Fecha de nacimiento:</span>
+                    <input class="bg-dark-x border-0" name="FECHA_NACIMIENTO_USU" type="date" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Fecha de expedición:</span>
+                    <input class="bg-dark-x border-0" name="FECHA_EXPEDICION_USU" type="date" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Nombres</span>
+                    <input class="bg-dark-x border-0" name="NOMBRE_USU" type="text" placeholder="Ingresa tu nombre" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Apellidos</span>
+                    <input class="bg-dark-x border-0" name="APELLIDOS_USU" type="text" placeholder="Ingresa tus apellidos" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Celular</span>
+                    <input class="bg-dark-x border-0" value="57" name="CELULAR_USU" type="text" placeholder="Ingresa tu celular" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Género:</span>
+                    <select class="bg-dark-x border-0" name="GENERO_USU" required>
+                        <option selected disabled>-----</option>
+                        <option value="Femenino">Femenino</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <span class="details">Ciudad:</span>
+                    <select class="bg-dark-x border-0" name="ID_CIUDAD_FK" required>
+                        <option selected disabled>-----</option>
+                        <option value="1">Medellin</option>
+                        <option value="2">Caldas</option>
+                        <option value="3">Barbosa</option>
+                        <option value="4">Sabaneta</option>
+                        <option value="5">La estrella</option>
+                        <option value="6">Itagui</option>
+                        <option value="7">Envigado</option>
+                        <option value="8">Bello</option>
+                        <option value="9">Girardota</option>
+                        <option value="10">Copacabana</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <span class="details">Dirección:</span>
+                    <input class="bg-dark-x border-0" name="DIRECCION_USU" type="text" placeholder="Ingresa tu dirección" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Correo electrónico:</span>
+                    <input class="bg-dark-x border-0" name="CORREO_ELECTRONICO_USU" type="email" placeholder="Ingresa tu correo electrónico" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Contraseña:</span>
+                    <input class="bg-dark-x border-0" name="CONTRASENA_USU" type="password" placeholder="Ingresa tu contraseña" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Confirmación de contraseña:</span>
+                    <input class="bg-dark-x border-0" name="CONFIRMAR_CONTRASENA" type="password" placeholder="Ingresa nuevamente tu contraseña" required>
+                </div>
+            </div>
+            <div class="button">
+                <button type="submit" class="btnRegistrarse">Registrarse</button>
+            </div>
+
+            <div class="text-center px-lg-5 pt-lg-3 pb-lg-4 p-3 w-100 mt-auto">
+                <p class="d-inline-block mb-0" style="color:white;">¿Ya tienes una cuenta?</p>
+                <a href="@Url.Action("Login","Acceso")" class="font-weight-bold text-decoration-none">Iniciar sesión</a>
+                <br /><br />
+                <a href="@Url.Action("Index","Home")" class="font-weight-bold text-decoration-none">Volver al inicio</a>
+            </div>
+
+            @if (ViewData["MENSAJE"] != null)
+            {
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    @ViewData["MENSAJE"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
         </form>
-    </section>
+    </div>
 
     <script src="~/Scripts/bootstrap.bundle.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
