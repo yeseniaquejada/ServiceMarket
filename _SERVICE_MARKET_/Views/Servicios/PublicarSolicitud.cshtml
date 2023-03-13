@@ -27,7 +27,7 @@
                 <div class="left3"></div>
                 <div class="right">
                     <h2 id="tituloP">Nueva solicitud</h2>
-                    <form action="@Url.Action("PublicarSolicitud","Servicios")" method="post">
+                    <form action="@Url.Action("PublicarSolicitud","Servicios")" method="post" autocomplete="off">
                         <input type="text" class="field" placeholder="Escriba el nombre de la solicitud" name="NOMBRE_SER" required />
                         <input type="number" class="field" placeholder="Digite el precio a pagar" name="PRECIO_SER" required />
                         <textarea class="field area" placeholder="Escriba una descripción breve sobre el servicio solicitado" name="DESCRIPCION_BREVE" required></textarea>
