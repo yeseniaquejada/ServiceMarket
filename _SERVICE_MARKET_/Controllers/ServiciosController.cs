@@ -69,16 +69,13 @@ namespace _SERVICE_MARKET_.Controllers
             return View(ser);
         }
 
-        
-
 
 
         //SECCIÓN PRESTADOR DE SERVICIOS
-
         public ActionResult ServiciosDisponiblesPrestador()
         {
             MantenimientoServicios ma = new MantenimientoServicios();
-            return View(ma.ConsultarServicios());
+            return View(ma.ConsultarSolicitudes());
         }
 
         public ActionResult PublicarServicio()
