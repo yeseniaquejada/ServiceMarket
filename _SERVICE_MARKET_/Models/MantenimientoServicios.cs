@@ -82,8 +82,8 @@ namespace _SERVICE_MARKET_.Models
         }
 
 
-        //METODO PARA CONSULTAR MAS INFORMACION SOBRE UN SERVICIO
-        public Servicio informacionPublicacion(int ID_SERVICIO)
+        //METODO PARA CONSULTAR MAS INFORMACION SOBRE UNA PUBLICACION
+        public Servicio InformacionPublicacion(int ID_SERVICIO)
         {
             cadena.Open();
             SqlCommand Comand = new SqlCommand("INFORMACION_PUBLICACION", cadena as SqlConnection);
@@ -112,12 +112,69 @@ namespace _SERVICE_MARKET_.Models
             return oDetalle_Servicios;
         }
 
-        //METODO PARA BUSCAR SERVICIOS
+        //METODO PARA CONSULTAR MAS INFORMACION SOBRE UNA SOLICITUD
+        public Servicio InformacionSolicitud(int ID_SERVICIO)
+        {
+            cadena.Open();
+            SqlCommand Comand = new SqlCommand("INFORMACION_SOLICITUD", cadena as SqlConnection);
+            Comand.Parameters.Add("@ID_SERVICIO", SqlDbType.Int);
+            Comand.Parameters["@ID_SERVICIO"].Value = ID_SERVICIO;
+            Comand.CommandType = CommandType.StoredProcedure;
+            SqlDataReader reader = Comand.ExecuteReader();
+
+            Servicio oDetalle_Servicios = new Servicio();
+            if (reader.Read())
+            {
+                oDetalle_Servicios.ID_SERVICIO = int.Parse(reader["ID_SERVICIO"].ToString());
+                oDetalle_Servicios.NOMBRE_SER = reader["NOMBRE_SER"].ToString();
+                oDetalle_Servicios.PRECIO_SER = decimal.Parse(reader["PRECIO_SER"].ToString());
+                oDetalle_Servicios.DESCRIPCION_BREVE = reader["DESCRIPCION_BREVE"].ToString();
+                oDetalle_Servicios.TERMINOS_SER = reader["TERMINOS_SER"].ToString();
+                oDetalle_Servicios.TIPO = reader["TIPO"].ToString();
+                oDetalle_Servicios.NOMBRE_CAT = reader["NOMBRE_CAT"].ToString();
+                oDetalle_Servicios.N_IDENTIFICACION_USU = reader["N_IDENTIFICACION_USU"].ToString();
+                oDetalle_Servicios.NOMBRE_USU = reader["NOMBRE_USU"].ToString();
+                oDetalle_Servicios.APELLIDOS_USU = reader["APELLIDOS_USU"].ToString();
+                oDetalle_Servicios.CELULAR_USU = reader["CELULAR_USU"].ToString();
+                oDetalle_Servicios.NOMBRE_CIUDAD = reader["NOMBRE_CIUDAD"].ToString();
+            }
+            cadena.Close();
+            return oDetalle_Servicios;
+        }
+
+        //METODO PARA BUSCAR PUBLICACIONES
         public List<Servicio> BuscarServicios(string NOMBRE_SER)
         {
             cadena.Open();
             List<Servicio> lista = new List<Servicio>();
             SqlCommand Comand = new SqlCommand("BUSQUEDAD_SERVICIOS", cadena as SqlConnection);
+            Comand.Parameters.Add("@NOMBRE_SER", SqlDbType.VarChar);
+            Comand.Parameters["@NOMBRE_SER"].Value = '%' + NOMBRE_SER + '%';
+            Comand.CommandType = CommandType.StoredProcedure;
+            SqlDataReader reader = Comand.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Servicio oServicios = new Servicio
+                {
+                    ID_SERVICIO = int.Parse(reader["ID_SERVICIO"].ToString()),
+                    NOMBRE_SER = reader["NOMBRE_SER"].ToString(),
+                    PRECIO_SER = decimal.Parse(reader["PRECIO_SER"].ToString()),
+                    DESCRIPCION_BREVE = reader["DESCRIPCION_BREVE"].ToString(),
+                    NOMBRE_CAT = reader["NOMBRE_CAT"].ToString()
+                };
+                lista.Add(oServicios);
+            }
+            cadena.Close();
+            return lista;
+        }
+
+        //METODO PARA BUSCAR SOLICITUDES
+        public List<Servicio> BuscarSolicitudes(string NOMBRE_SER)
+        {
+            cadena.Open();
+            List<Servicio> lista = new List<Servicio>();
+            SqlCommand Comand = new SqlCommand("BUSQUEDAD_SOLICITUDES", cadena as SqlConnection);
             Comand.Parameters.Add("@NOMBRE_SER", SqlDbType.VarChar);
             Comand.Parameters["@NOMBRE_SER"].Value = '%' + NOMBRE_SER + '%';
             Comand.CommandType = CommandType.StoredProcedure;

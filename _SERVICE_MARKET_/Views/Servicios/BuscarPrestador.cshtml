@@ -1,0 +1,102 @@
+﻿@model IEnumerable<_SERVICE_MARKET_.Models.Servicio>
+
+@{
+    ViewBag.Title = "Búsqueda";
+    Layout = "~/Views/Shared/Layout_P.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Service Market</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/all.min.css" rel="stylesheet" />
+    <link href="~/Content/Css/Buscar.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active c-item">
+                <img src="~/Imagenes/Prestador/Categorias/Trabajos_Domesticos.jpg" class="d-block w-100 c-img" alt="...">
+                <div class="carousel-caption top-0 mt-5">
+                    <p class="mt-5 fs-3">Servicios de</p>
+                    <h1 class="display-1 fw-bolder text-capitalize">Trabajos domésticos</h1>
+                    <button type="button" class="btnBuscador btn-primary px-3 py-1 fs-5 mt-4 drop">Conocer Más</button>                </div>
+            </div>
+            <div class="carousel-item c-item">
+                <img src="~/Imagenes/Prestador/Categorias/Remodelacion_Albañileria.jpg" class="d-block w-100 c-img" alt="...">
+                <div class="carousel-caption top-0 mt-5">
+                    <p class="mt-5 fs-3">Servicios de</p>
+                    <h1 class="display-1 fw-bolder text-capitalize">Remodelación y albañilería</h1>
+                    <button type="button" class="btnBuscador btn-primary px-3 py-1 fs-5 mt-4 drop">Conocer Más</button>                </div>
+            </div>
+            <div class="carousel-item c-item">
+                <img src="~/Imagenes/Prestador/Categorias/Mantenimiento.jpg" class="d-block w-100 c-img" alt="...">
+                <div class="carousel-caption top-0 mt-5">
+                    <p class="mt-5 fs-3">Servicios de</p>
+                    <h1 class="display-1 fw-bolder text-capitalize">Mantenimiento</h1>
+                    <button type="button" class="btnBuscador btn-primary px-3 py-1 fs-5 mt-4 drop">Conocer Más</button>                </div>
+            </div>
+            <div class="carousel-item c-item">
+                <img src="~/Imagenes/Prestador/Categorias/Salud_Belleza.jpg" class="d-block w-100 c-img" alt="...">
+                <div class="carousel-caption top-0 mt-5">
+                    <p class="mt-5 fs-3">Servicios de</p>
+                    <h1 class="display-1 fw-bolder text-capitalize">Salud y belleza</h1>
+                    <button type="button" class="btnBuscador btn-primary px-3 py-1 fs-5 mt-4 drop">Conocer Más</button>                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <section class="cards-content">
+        @foreach (var item in Model)
+        {
+            <div class="container">
+                <div class="course drop">
+                    <div class="preview">
+                        <h2>@Html.DisplayFor(modelItem => item.NOMBRE_SER)</h2>
+                    </div>
+                    <div class="informacionCard">
+                        <h6><b>Categoría:</b> @Html.DisplayFor(modelItem => item.NOMBRE_CAT)</h6>
+                        <h3><b>$</b> @Html.DisplayFor(modelItem => item.PRECIO_SER)</h3>
+                        <p class="p-trunc">@Html.DisplayFor(modelItem => item.DESCRIPCION_BREVE)</p>
+                        <button type="submit" class="btn">@Html.ActionLink("Más información", "InformacionSolicitudes", new { ID = item.ID_SERVICIO }, new { @class = "btnCard text-decoration-none" })</button>
+                    </div>
+                </div>
+            </div>
+        }
+    </section>
+
+    <div class="d-grid gap-2 col-6 mx-auto d-block volverInicio">
+        <a href="@Url.Action("ServiciosDisponiblesPrestador", "Servicios")" class="btnBuscador btn btn-outline-primary">Volver al inicio</a>
+    </div>
+
+    <script>
+        const trunc = document.querySelector('p-trunc');
+        trunc.innerText = trunc.innerText.substring(0, 100) + '...';
+    </script>
+
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/all.min.js"></script>
+</body>
+</html>

@@ -65,7 +65,7 @@ namespace _SERVICE_MARKET_.Controllers
         public ActionResult InformacionPublicaciones(int ID)
         {
             MantenimientoServicios ma = new MantenimientoServicios();
-            Servicio ser = ma.informacionPublicacion(ID);
+            Servicio ser = ma.InformacionPublicacion(ID);
             return View(ser);
         }
 
@@ -76,6 +76,12 @@ namespace _SERVICE_MARKET_.Controllers
         {
             MantenimientoServicios ma = new MantenimientoServicios();
             return View(ma.ConsultarSolicitudes());
+        }
+        public ActionResult BuscarPrestador(string NOMBRE_SER)
+        {
+            MantenimientoServicios ma = new MantenimientoServicios();
+            List<Servicio> lista = ma.BuscarSolicitudes(NOMBRE_SER);
+            return View(lista);
         }
 
         public ActionResult PublicarServicio()
@@ -93,7 +99,7 @@ namespace _SERVICE_MARKET_.Controllers
                 PRECIO_SER = decimal.Parse(collection["PRECIO_SER"].ToString()),
                 DESCRIPCION_BREVE = collection["DESCRIPCION_BREVE"],
                 TERMINOS_SER = collection["TERMINOS_SER"],
-                TIPO = collection["TIPO"],
+                TIPO = "Publicacion",
                 N_IDENTIFICACION_USU_FK = collection["N_IDENTIFICACION_USU_FK"],
                 ID_CATEGORIA_FK = int.Parse(collection["ID_CATEGORIA_FK"])
             };
@@ -101,17 +107,12 @@ namespace _SERVICE_MARKET_.Controllers
             return RedirectToAction("ServiciosDisponiblesPrestador");
         }
 
-
-
-
-
-
-        
-        public ActionResult BuscarSer(string NOMBRE_SER)
+        public ActionResult InformacionSolicitudes(int ID)
         {
             MantenimientoServicios ma = new MantenimientoServicios();
-            List<Servicio> lista = ma.BuscarServicios(NOMBRE_SER);
-            return View(lista);
+            Servicio ser = ma.InformacionSolicitud(ID);
+            return View(ser);
         }
+
     }
 }

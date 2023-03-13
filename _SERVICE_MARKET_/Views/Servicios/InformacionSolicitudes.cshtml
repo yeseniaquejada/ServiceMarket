@@ -1,0 +1,126 @@
+﻿@model _SERVICE_MARKET_.Models.Servicio
+
+@{
+    ViewBag.Title = "Información Solicitudes";
+    Layout = "~/Views/Shared/Layout_P.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Service Market</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Css/MasInformacion.css" rel="stylesheet" />
+    <link href="~/Content/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 class="titulo">@Html.DisplayFor(model => model.NOMBRE_SER)</h1>
+    <div class="container informacion">
+        <div class="row">
+            <div class="col-6">
+                <p><span class="fw-bold">Descripción:</span> @Html.DisplayFor(model => model.DESCRIPCION_BREVE)</p>
+                <p><span class="fw-bold">Términos:</span> @Html.DisplayFor(model => model.TERMINOS_SER)</p>
+            </div>
+            <div class="col-6">
+                <p><span class="fw-bold">Precio:</span> $@Html.DisplayFor(model => model.PRECIO_SER)</p>
+                <p><span class="fw-bold">Categoría:</span> @Html.DisplayFor(model => model.NOMBRE_CAT)</p>
+                <p><span class="fw-bold">Prestador de servicios: </span>@Html.DisplayFor(model => model.NOMBRE_USU) @Html.DisplayFor(model => model.APELLIDOS_USU)</p>
+                <p><span class="fw-bold">Contacto: </span> +@Html.DisplayFor(model => model.CELULAR_USU)</p>
+                <p><span class="fw-bold">Ciudad: </span> @Html.DisplayFor(model => model.NOMBRE_CIUDAD)</p>
+                <div>
+                    <a href="https://api.whatsapp.com/send?phone=@Html.DisplayFor(model => model.CELULAR_USU)" class="btn btnAdquirir">Adquirir servicio</a>
+                    <a href="@Url.Action("ServiciosDisponiblesPrestador", "Servicios")" class="btn btnAdquirir">Volver al inicio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="carouselImagenes">
+        <div class="contenedor">
+            <div class="carousel">
+                <div class="carousel__contenedor">
+                    <button aria-label="Anterior" class="carousel__anterior">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+
+                    <div class="carousel__lista">
+                        <div class="carousel__elemento">
+                            <img src="~/Imagenes/Prestador/MasInformacion/Albañileria.jpg" alt="albañileria">
+                        </div>
+                        <div class="carousel__elemento">
+                            <img src="~/Imagenes/Prestador/MasInformacion/Belleza.jpg" alt="belleza">
+                        </div>
+                        <div class="carousel__elemento">
+                            <img src="~/Imagenes/Prestador/MasInformacion/Limpieza.jpg" alt="limpieza">
+                        </div>
+                        <div class="carousel__elemento">
+                            <img src="~/Imagenes/Prestador/MasInformacion/Mantenimiento.jpg" alt="mantenimiento">
+                        </div>
+                        <div class="carousel__elemento">
+                            <img src="~/Imagenes/Prestador/MasInformacion/Remodelacion.jpg" alt="remodelacion">
+                        </div>
+                        <div class="carousel__elemento">
+                            <img src="~/Imagenes/Prestador/MasInformacion/Salud.jpg" alt="salud">
+                        </div>
+                    </div>
+
+                    <button aria-label="Siguiente" class="carousel__siguiente">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div role="tablist" class="carousel__indicadores"></div>
+            </div>
+        </div>
+
+        <!--BOTON PARA LAS CATEGORIAS-->
+        <center><a href="@Url.Action("", "")" class="btn btnCat">Ver categorías</a></center>
+    </div>
+
+    <script>
+        window.addEventListener('load', function () {
+            new Glider(document.querySelector('.carousel__lista'), {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: '.carousel__indicadores',
+                arrows: {
+                    prev: '.carousel__anterior',
+                    next: '.carousel__siguiente'
+                },
+                responsive: [
+                    {
+                        // screens greater than >= 775px
+                        breakpoint: 450,
+                        settings: {
+                            // Set to `auto` and provide item width to adjust to viewport
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    }, {
+                        // screens greater than >= 1024px
+                        breakpoint: 800,
+                        settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 4
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+</body>
+</html>

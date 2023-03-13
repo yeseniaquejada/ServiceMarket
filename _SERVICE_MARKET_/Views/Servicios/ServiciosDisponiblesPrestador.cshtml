@@ -86,7 +86,7 @@
                             <h6><b>Categoría:</b> @Html.DisplayFor(modelItem => item.NOMBRE_CAT)</h6>
                             <h3><b>$</b> @Html.DisplayFor(modelItem => item.PRECIO_SER)</h3>
                             <p class="p-trunc">@Html.DisplayFor(modelItem => item.DESCRIPCION_BREVE)</p>
-                            <button type="submit" class="btn">@Html.ActionLink("Más información", "", new { ID = item.ID_SERVICIO }, new { @class = "btnCard text-decoration-none" })</button>
+                            <button type="submit" class="btn">@Html.ActionLink("Más información", "InformacionSolicitudes", new { ID = item.ID_SERVICIO }, new { @class = "btnCard text-decoration-none" })</button>
                         </div>
                     </div>
                 </div>

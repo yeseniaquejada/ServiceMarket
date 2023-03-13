@@ -177,6 +177,13 @@
     <Content Include="Imagenes\Prestador\Categorias\Remodelacion_Albañileria.jpg" />
     <Content Include="Imagenes\Prestador\Categorias\Salud_Belleza.jpg" />
     <Content Include="Imagenes\Prestador\Categorias\Trabajos_Domesticos.jpg" />
+    <Content Include="Imagenes\Prestador\MasInformacion\Albañileria.jpg" />
+    <Content Include="Imagenes\Prestador\MasInformacion\Belleza.jpg" />
+    <Content Include="Imagenes\Prestador\MasInformacion\Limpieza.jpg" />
+    <Content Include="Imagenes\Prestador\MasInformacion\Mantenimiento.jpg" />
+    <Content Include="Imagenes\Prestador\MasInformacion\Remodelacion.jpg" />
+    <Content Include="Imagenes\Prestador\MasInformacion\Salud.jpg" />
+    <Content Include="Imagenes\Prestador\PublicarServicio.jpg" />
     <Content Include="Imagenes\Usuarios\Mantenimiento.jpg" />
     <Content Include="Imagenes\Usuarios\Botones\obrerobtn.png" />
     <Content Include="Imagenes\Usuarios\Remodelacion_Albañileria.jpg" />
@@ -240,6 +247,9 @@
     <Content Include="Views\Servicios\BuscarCliente.cshtml" />
     <Content Include="Views\Servicios\InformacionPublicaciones.cshtml" />
     <Content Include="Views\Servicios\ServiciosDisponiblesPrestador.cshtml" />
+    <Content Include="Views\Servicios\PublicarServicio.cshtml" />
+    <Content Include="Views\Servicios\InformacionSolicitudes.cshtml" />
+    <Content Include="Views\Servicios\BuscarPrestador.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
